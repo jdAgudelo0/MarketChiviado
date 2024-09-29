@@ -110,7 +110,7 @@ public class Vendedor implements AdministrarMensajes {
     }
 
     public void editarProducto(Producto producto){
-        
+
 
     }
 
