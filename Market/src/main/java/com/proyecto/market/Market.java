@@ -26,7 +26,7 @@ public class Market {
 
     }
 
-    public void sugerir contacto(Vendedor vendedores){
+    public void SugerirContacto(Vendedor vendedores){
         
     }
 }
