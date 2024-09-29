@@ -5,13 +5,13 @@ import java.util.ArrayList;
 public class Muro {
     private String mensaje;
     private ArrayList<Comentario> comentarios;
-    private int cantifdadDeLikes;
+    private int cantidadDeLikes;
 
     public Muro() {}
-    public Muro(String mensaje, ArrayList<Comentario> comentarios, int cantifdadDeLikes) {
+    public Muro(String mensaje, ArrayList<Comentario> comentarios, int cantidadDeLikes) {
         this.mensaje = mensaje;
         this.comentarios = new ArrayList<Comentario>();
-        this.cantifdadDeLikes = cantifdadDeLikes;
+        this.cantidadDeLikes = cantidadDeLikes;
     }
 
     public String getMensaje() {
@@ -30,9 +30,9 @@ public class Muro {
     }
 
     public int getCantifdadDeLikes() {
-        return cantifdadDeLikes;
+        return cantidadDeLikes;
     }
     public void setCantifdadDeLikes(int cantifdadDeLikes) {
-        this.cantifdadDeLikes = cantifdadDeLikes;
+        this.cantidadDeLikes = cantifdadDeLikes;
     }
 }

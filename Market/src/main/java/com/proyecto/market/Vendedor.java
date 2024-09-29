@@ -1,6 +1,8 @@
 package com.proyecto.market;
 
-import java.io.IOException;
+import com.proyecto.market.excepciones.LimiteVendedoresAlcanzado;
+import com.proyecto.market.excepciones.ProductoValorNegativo;
+
 import java.util.ArrayList;
 
 //Atributos de nuestro vendedor
@@ -11,6 +13,9 @@ public class Vendedor {
     private ArrayList<Vendedor> vendedoresAliados;
     private ArrayList<Vendedor> contactos;
     private Muro muro;
+    private static final int CANTIDAD_MAXIMA_VENDEDORES_ALIADOS= 10;
+
+    private ArrayList<Producto> productos;
 
     public Vendedor(String nombre, String apellido, String cedula, ArrayList<Vendedor> vendedoresAliados, Muro muro){
         this.nombre = nombre;
@@ -71,15 +76,21 @@ public class Vendedor {
         this.muro = muro;
     }
 
-    //public void agregarProducto(Producto producto){
-    //    this.productos.add(producto);
-    //}
+    public void agregarProducto(Producto producto) throws ProductoValorNegativo {
+        if(producto.getPrecio()<=0){
+            throw new ProductoValorNegativo("El producto no puede tener un valor negativo");
+        }
+        this.productos.add(producto);
+    }
 
-    //public void eliminarProducto(Producto producto){
-    //    this.productos.remove(producto)
-    //}
+    public void eliminarProducto(Producto producto){
+        this.productos.remove(producto);
+    }
 
-    public void agregarVendedor(Vendedor vendedor){
+    public void agregarVendedor(Vendedor vendedor) throws LimiteVendedoresAlcanzado {
+        if( vendedoresAliados.size()==CANTIDAD_MAXIMA_VENDEDORES_ALIADOS){
+            throw new LimiteVendedoresAlcanzado("El vendedor no puede tener más de"+ CANTIDAD_MAXIMA_VENDEDORES_ALIADOS + "vendedores aliados");
+        }
         this.vendedoresAliados.add(vendedor);
     }
 

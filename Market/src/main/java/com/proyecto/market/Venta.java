@@ -1,14 +1,14 @@
 package com.proyecto.market;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 public class Venta {
 
     private Vendedor vendedor;
     private Date fechaPublicacion;
-    private LocalDate fechaVenta;
+    private Date fechaVenta;
 
-    public Venta(Vendedor vendedor, Date fechaPublicacion, Localate fechaVenta) {
+    public Venta(Vendedor vendedor, Date fechaPublicacion, Date fechaVenta) {
         this.vendedor = vendedor;
         this.fechaPublicacion = fechaPublicacion;
         this.fechaVenta = fechaVenta;
@@ -30,11 +30,11 @@ public class Venta {
         this.fechaPublicacion = fechaPublicacion;
     }
 
-    public LocalDate getFechaVenta() {
+    public Date getFechaVenta() {
         return fechaVenta;
     }
 
-    public void setFechaVenta(LocalDate fechaVenta) {
+    public void setFechaVenta(Date fechaVenta) {
         this.fechaVenta = fechaVenta;
     }
 }
