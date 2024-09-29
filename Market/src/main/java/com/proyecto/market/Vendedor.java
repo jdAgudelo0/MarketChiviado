@@ -1,7 +1,10 @@
 package com.proyecto.market;
 
+import com.proyecto.market.Enum.Estado;
 import com.proyecto.market.excepciones.LimiteVendedoresAlcanzado;
+import com.proyecto.market.excepciones.ProductoNoEncontrado;
 import com.proyecto.market.excepciones.ProductoValorNegativo;
+import com.proyecto.market.excepciones.VendedorNoEncontrado;
 
 import java.util.ArrayList;
 
@@ -17,6 +20,8 @@ public class Vendedor {
 
     private ArrayList<Producto> productos;
 
+    private ArrayList<Chat> chats;
+
     public Vendedor(String nombre, String apellido, String cedula, ArrayList<Vendedor> vendedoresAliados, Muro muro){
         this.nombre = nombre;
         this.apellido = apellido;
@@ -24,6 +29,8 @@ public class Vendedor {
         this.vendedoresAliados = new ArrayList<Vendedor>();
         this.muro = muro;
         this.contactos = new ArrayList<Vendedor>();
+        this.chats = new ArrayList<Chat>();
+        this.productos = new ArrayList<Producto>();
     }
     public Vendedor() {}
 
@@ -72,19 +79,37 @@ public class Vendedor {
         this.vendedoresAliados = vendedoresAliados;
     }
 
+    public ArrayList<Producto> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(ArrayList<Producto> productos) {
+        this.productos = productos;
+    }
+
+    public ArrayList<Chat> getChats() {
+        return chats;
+    }
+
+    public void setChats(ArrayList<Chat> chats) {
+        this.chats = chats;
+    }
+
     public void setMuro(Muro muro) {
         this.muro = muro;
     }
 
-    public void agregarProducto(Producto producto) throws ProductoValorNegativo {
-        if(producto.getPrecio()<=0){
+    public void agregarProducto(String nombreProducto, String codigo, String imagen, String categoria, float precio, Estado estado) throws ProductoValorNegativo {
+        if(precio<=0){
             throw new ProductoValorNegativo("El producto no puede tener un valor negativo");
         }
-        this.productos.add(producto);
+        this.productos.add(new Producto(nombre, codigo, imagen, categoria, precio, estado));
     }
 
-    public void eliminarProducto(Producto producto){
-        this.productos.remove(producto);
+    public void eliminarProducto(Producto producto) throws ProductoNoEncontrado{
+        if (productos.contains(producto)){
+        this.productos.remove(producto);}
+        throw new ProductoNoEncontrado("Este producto no esta dentro de tu stock");
     }
 
     public void agregarVendedor(Vendedor vendedor) throws LimiteVendedoresAlcanzado {
@@ -94,8 +119,10 @@ public class Vendedor {
         this.vendedoresAliados.add(vendedor);
     }
 
-    public void eliminarVendedor(Vendedor vendedor){
-        this.vendedoresAliados.remove(vendedor);
+    public void eliminarVendedor(Vendedor vendedor) throws VendedorNoEncontrado{
+        if (vendedoresAliados.contains(vendedor)){
+            this.productos.remove(vendedor);}
+        throw new VendedorNoEncontrado("Este vendedor no esta dentro de tu lista");
     }
 
     public Vendedor buscarVendedor(String nombre, String apellido, String cedula, ArrayList<Vendedor> vendedoresAliados){
@@ -107,6 +134,10 @@ public class Vendedor {
             }
         }
         return null;
+    }
+
+    public void EnviarMensaje(Chat chat, Vendedor receptor,String mensaje){
+        chat.enviarMensaje(this,receptor, mensaje);
     }
 
     public void editarProducto(Producto producto){

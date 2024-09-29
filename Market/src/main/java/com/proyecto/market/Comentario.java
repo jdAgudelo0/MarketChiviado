@@ -6,9 +6,9 @@ public class Comentario {
     private String mensaje;
     private LocalDate fechaPublicacion;
 
-    public Comentario(String mensaje, LocalDate fechaPublicacion) {
+    public Comentario(String mensaje) {
         this.mensaje = mensaje;
-        this.fechaPublicacion = fechaPublicacion;
+        this.fechaPublicacion = LocalDate.now();
     }
 
     public Comentario(){}
