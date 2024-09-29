@@ -1,12 +1,13 @@
 package com.proyecto.market;
 
+import com.proyecto.market.Interface.AdministrarMensajes;
 import com.proyecto.market.excepciones.LimiteVendedoresAlcanzado;
 import com.proyecto.market.excepciones.ProductoValorNegativo;
 
 import java.util.ArrayList;
 
 //Atributos de nuestro vendedor
-public class Vendedor {
+public class Vendedor implements AdministrarMensajes {
     private String nombre;
     private String apellido;
     private String cedula;
@@ -14,7 +15,6 @@ public class Vendedor {
     private ArrayList<Vendedor> contactos;
     private Muro muro;
     private static final int CANTIDAD_MAXIMA_VENDEDORES_ALIADOS= 10;
-
     private ArrayList<Producto> productos;
 
     public Vendedor(String nombre, String apellido, String cedula, ArrayList<Vendedor> vendedoresAliados, Muro muro){
@@ -98,10 +98,10 @@ public class Vendedor {
         this.vendedoresAliados.remove(vendedor);
     }
 
-    public Vendedor buscarVendedor(String nombre, String apellido, String cedula, ArrayList<Vendedor> vendedoresAliados){
+    public Vendedor buscarVendedorAliado(String nombre, String apellido, String cedula) throws ProductoValorNegativo {
         for( Vendedor vendedor : vendedoresAliados){
             if(vendedoresAliados.isEmpty()){
-                return null;
+                throw new ProductoValorNegativo("No hay vendedores para buscar");
             }else if(vendedor.getNombre().equalsIgnoreCase(nombre) && vendedor.getApellido().equalsIgnoreCase(apellido)){
                 return vendedor;
             }
@@ -110,6 +110,7 @@ public class Vendedor {
     }
 
     public void editarProducto(Producto producto){
+        
 
     }
 
@@ -118,6 +119,13 @@ public class Vendedor {
     }
 
     public void darLike(Producto producto){
+
+
+    }
+
+
+    @Override
+    public void enviarMensaje(Vendedor emisor, Vendedor receptor, String mensaje) {
 
     }
 }

@@ -1,8 +1,10 @@
 package com.proyecto.market;
 
+import com.proyecto.market.Interface.AdministrarMensajes;
+
 import java.time.LocalDate;
 
-public class Chat {
+public class Chat implements AdministrarMensajes {
 
     private Vendedor receptor;
     private Vendedor emisor;
@@ -48,6 +50,11 @@ public class Chat {
 
     public void setFechaEnvio(LocalDate fechaEnvio) {
         this.fechaEnvio = fechaEnvio;
+
+    }
+
+    @Override
+    public void enviarMensaje(Vendedor emisor, Vendedor receptor, String mensaje) {
 
     }
 }
