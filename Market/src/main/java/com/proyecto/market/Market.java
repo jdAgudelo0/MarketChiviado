@@ -13,7 +13,7 @@ public class Market {
         return market;
     }
 
-    public void registrarUsuario(String nombre, String apellidos, String cedula, String direccion, String usuario, String contraseña){
+    public void registrarVendedor(String nombre, String apellidos, String cedula, String direccion, String usuario, String contraseña){
 
 
     }
@@ -27,6 +27,6 @@ public class Market {
     }
 
     public void sugerir contacto(Vendedor vendedores){
-        
+
     }
 }
