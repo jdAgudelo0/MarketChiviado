@@ -1,22 +1,19 @@
 package com.proyecto.market;
 
-import com.proyecto.market.Interface.AdministrarMensajes;
-
 import java.time.LocalDate;
-import java.util.ArrayList;
 
-public class Chat implements AdministrarMensajes {
+public class Chat {
 
     private Vendedor receptor;
     private Vendedor emisor;
-    private ArrayList<String> mensajes;
+    private String mensaje;
     private LocalDate fechaEnvio;
 
-    public Chat(Vendedor receptor, Vendedor emisor, LocalDate fechaEnvio) {
+    public Chat(Vendedor receptor, Vendedor emisor, String mensaje, LocalDate fechaEnvio) {
         this.receptor = receptor;
         this.emisor = emisor;
+        this.mensaje = mensaje;
         this.fechaEnvio = LocalDate.now();
-        this.mensajes= new ArrayList<String>();
     }
 
     public Chat() {}
@@ -37,12 +34,12 @@ public class Chat implements AdministrarMensajes {
         this.emisor = emisor;
     }
 
-    public ArrayList<String> getMensajes() {
-        return mensajes;
+    public String getMensaje() {
+        return mensaje;
     }
 
-    public void setMensajes(ArrayList<String> mensajes) {
-        this.mensajes = mensajes;
+    public void setMensaje(String mensaje) {
+        this.mensaje = mensaje;
     }
 
     public LocalDate getFechaEnvio() {
@@ -52,9 +49,5 @@ public class Chat implements AdministrarMensajes {
     public void setFechaEnvio(LocalDate fechaEnvio) {
         this.fechaEnvio = fechaEnvio;
 
-    }
-    @Override
-    public void enviarMensaje(Vendedor emisor, Vendedor receptor, String mensaje){
-        mensajes.add(String.valueOf(new Comentario(mensaje)));
     }
 }
