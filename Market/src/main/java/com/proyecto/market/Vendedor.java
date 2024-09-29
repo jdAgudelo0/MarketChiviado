@@ -1,5 +1,6 @@
 package com.proyecto.market;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 //Atributos de nuestro vendedor
@@ -68,5 +69,44 @@ public class Vendedor {
 
     public void setMuro(Muro muro) {
         this.muro = muro;
+    }
+
+    //public void agregarProducto(Producto producto){
+    //    this.productos.add(producto);
+    //}
+
+    //public void eliminarProducto(Producto producto){
+    //    this.productos.remove(producto)
+    //}
+
+    public void agregarVendedor(Vendedor vendedor){
+        this.vendedoresAliados.add(vendedor);
+    }
+
+    public void eliminarVendedor(Vendedor vendedor){
+        this.vendedoresAliados.remove(vendedor);
+    }
+
+    public Vendedor buscarVendedor(String nombre, String apellido, String cedula, ArrayList<Vendedor> vendedoresAliados){
+        for( Vendedor vendedor : vendedoresAliados){
+            if(vendedoresAliados.isEmpty()){
+                return null;
+            }else if(vendedor.getNombre().equalsIgnoreCase(nombre) && vendedor.getApellido().equalsIgnoreCase(apellido)){
+                return vendedor;
+            }
+        }
+        return null;
+    }
+
+    public void editarProducto(Producto producto){
+
+    }
+
+    public void agregarComentario(Comentario comentario){
+
+    }
+
+    public void darLike(Producto producto){
+
     }
 }
