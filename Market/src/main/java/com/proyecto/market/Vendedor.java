@@ -1,5 +1,6 @@
 package com.proyecto.market;
 
+import com.proyecto.market.Enum.Estado;
 import com.proyecto.market.excepciones.LimiteVendedoresAlcanzado;
 import com.proyecto.market.excepciones.ProductoValorNegativo;
 
@@ -76,11 +77,11 @@ public class Vendedor {
         this.muro = muro;
     }
 
-    public void agregarProducto(Producto producto) throws ProductoValorNegativo {
-        if(producto.getPrecio()<=0){
+    public void agregarProducto(String nombreProducto, String codigo, String imagen, String categoria, float precio, Estado estado) throws ProductoValorNegativo {
+        if(precio<=0){
             throw new ProductoValorNegativo("El producto no puede tener un valor negativo");
         }
-        this.productos.add(producto);
+        this.productos.add(new Producto(nombreProducto,codigo,imagen,categoria,precio,estado ));
     }
 
     public void eliminarProducto(Producto producto){
@@ -107,6 +108,10 @@ public class Vendedor {
             }
         }
         return null;
+    }
+
+    public void enviarMensaje(Chat chatReceptor, String mensaje){
+        chatReceptor.enviarMensaje(mensaje);
     }
 
     public void editarProducto(Producto producto){
