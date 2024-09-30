@@ -1,4 +1,4 @@
-package com.proyecto.market.excepciones;
+package com.proyecto.market.Exceptions;
 /*Excepcion lanzada cuando un usuario intenta ingresar pero sus datos son incorrectos*/
 
 public class CreedencialesNoValidas extends Exception {

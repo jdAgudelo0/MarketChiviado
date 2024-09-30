@@ -1,4 +1,4 @@
-package com.proyecto.market.excepciones;
+package com.proyecto.market.Exceptions;
 /*Excepcion lanzada cuando no encuentra un vendedor , porque no existe
  * o porque fue eliminado*/
 

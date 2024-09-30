@@ -1,4 +1,4 @@
-package com.proyecto.market.excepciones;
+package com.proyecto.market.Exceptions;
 
 //**Excepcion para evitar que los precios sean negativos o 0**//
 public class ProductoValorNegativo extends Exception{

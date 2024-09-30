@@ -1,4 +1,4 @@
-package com.proyecto.market;
+package com.proyecto.market.Model;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

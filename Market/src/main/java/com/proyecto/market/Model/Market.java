@@ -1,4 +1,4 @@
-package com.proyecto.market;
+package com.proyecto.market.Model;
 
 public class Market {
     private Vendedor vendedores;

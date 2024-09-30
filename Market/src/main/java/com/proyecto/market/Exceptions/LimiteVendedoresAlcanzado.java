@@ -1,4 +1,4 @@
-package com.proyecto.market.excepciones;
+package com.proyecto.market.Exceptions;
 
 
 //**Excepcion lanzada cuando un vendor intente superar el limite de vendedores aliados del sistemea**//

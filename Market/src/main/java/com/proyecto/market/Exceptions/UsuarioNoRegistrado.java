@@ -1,4 +1,4 @@
-package com.proyecto.market.excepciones;
+package com.proyecto.market.Exceptions;
 
 /*Excepcion lanzada cuando hubo un fallo a la hora de el registro*/
 public class UsuarioNoRegistrado extends Exception {

@@ -1,5 +1,5 @@
-package com.proyecto.market;
-import com.proyecto.market.Enum.Estado;
+package com.proyecto.market.Model;
+import com.proyecto.market.Model.Enum.Estado;
 import java.util.ArrayList;
 
 public class Producto {
@@ -8,7 +8,7 @@ public class Producto {
     private String imagen;
     private String categoria;
     private float precio;
-    private Estado estado;
+    private Estado estado ;
     private ArrayList<Comentario> comentarios;
     private int likes;
 

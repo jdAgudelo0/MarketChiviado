@@ -1,4 +1,4 @@
-package com.proyecto.market.excepciones;
+package com.proyecto.market.Exceptions;
 
 //**Se lanza cuando un vendor intenta agregar un vendedor que ya tiene en su lista de contactos**//
 

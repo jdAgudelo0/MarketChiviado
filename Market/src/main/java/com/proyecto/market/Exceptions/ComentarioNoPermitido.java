@@ -1,4 +1,4 @@
-package com.proyecto.market.excepciones;
+package com.proyecto.market.Exceptions;
 
 /*Excepción lanzada cuando un venderdor intenta comentar
     *en una publicación de otro vendedor que no hace parte de su lista de contactos

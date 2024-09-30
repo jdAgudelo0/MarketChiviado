@@ -1,4 +1,4 @@
-package com.proyecto.market.excepciones;
+package com.proyecto.market.Exceptions;
 
 /* Excepcion lanzada cuando un vendedor intenta negociar o comprar un producto,
     pero ya no hay stock de ese producto*/

@@ -1,7 +1,6 @@
-package com.proyecto.market.Interface;
+package com.proyecto.market.Model.Interface;
 
-import com.proyecto.market.Comentario;
-import com.proyecto.market.Vendedor;
+import com.proyecto.market.Model.Vendedor;
 
 public interface AdministrarMensajes {
 

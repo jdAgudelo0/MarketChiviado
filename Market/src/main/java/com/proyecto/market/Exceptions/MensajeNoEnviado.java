@@ -1,4 +1,4 @@
-package com.proyecto.market.excepciones;
+package com.proyecto.market.Exceptions;
 /*  Excepcion para cuando un vendedor intenta enviar un mensaje a otro vendedore
     *que no esta en su lista de contactos
 */
