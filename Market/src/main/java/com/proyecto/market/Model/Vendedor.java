@@ -1,12 +1,13 @@
-package com.proyecto.market;
+package com.proyecto.market.Model;
 
-import com.proyecto.market.excepciones.LimiteVendedoresAlcanzado;
-import com.proyecto.market.excepciones.ProductoValorNegativo;
+import com.proyecto.market.Model.Interface.AdministrarMensajes;
+import com.proyecto.market.Exceptions.LimiteVendedoresAlcanzado;
+import com.proyecto.market.Exceptions.ProductoValorNegativo;
 
 import java.util.ArrayList;
 
 //Atributos de nuestro vendedor
-public class Vendedor {
+public class Vendedor implements AdministrarMensajes {
     private String nombre;
     private String apellido;
     private String cedula;
@@ -88,7 +89,7 @@ public class Vendedor {
     }
 
     public void agregarVendedor(Vendedor vendedor) throws LimiteVendedoresAlcanzado {
-        if( vendedoresAliados.size()==CANTIDAD_MAXIMA_VENDEDORES_ALIADOS){
+        if( vendedoresAliados.size()>CANTIDAD_MAXIMA_VENDEDORES_ALIADOS){
             throw new LimiteVendedoresAlcanzado("El vendedor no puede tener más de"+ CANTIDAD_MAXIMA_VENDEDORES_ALIADOS + "vendedores aliados");
         }
         this.vendedoresAliados.add(vendedor);
@@ -110,14 +111,34 @@ public class Vendedor {
     }
 
     public void editarProducto(Producto producto){
+        Producto productoViejo = buscarProducto(producto.getCodigo());
+        if(productoViejo != null){
+            productos.set(productos.indexOf(productoViejo), producto);
+        }
 
     }
 
-    public void agregarComentario(Comentario comentario){
+    public void agregarComentario(Comentario comentario, String codigo){
+        Producto producto = buscarProducto(codigo);
+        if(producto != null){
+            producto.getComentarios().add(comentario);
+        }
 
     }
 
     public void darLike(Producto producto){
+        producto.setLikes(producto.getLikes() + 1);
+        }
+
+
+
+    @Override
+    public void enviarMensaje(String mensaje) {
 
     }
+
+    public Producto buscarProducto(String codigo){
+        return productos.stream().filter(producto -> producto.getCodigo().equalsIgnoreCase(codigo)).findFirst().get();
+    }
 }
+
