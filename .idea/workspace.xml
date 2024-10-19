@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="966a20cc-1235-4593-be1a-8e750c891eb5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Market/src/main/java/com/proyecto/market/Vendedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Market/src/main/java/com/proyecto/market/Administrador.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Market/src/main/java/com/proyecto/market/HelloApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Market/src/main/java/com/proyecto/market/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +27,9 @@
     &quot;accountId&quot;: &quot;eaa08b0e-9495-46a6-9bc0-8d2228e34c8d&quot;
   }
 }</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -40,8 +40,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Bill-Cypher",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "Agu",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/juanda/OneDrive/Escritorio/Programacion/ProyectoFinal/MarketChiviado",
@@ -77,6 +79,7 @@
       <workItem from="1727486755281" duration="464000" />
       <workItem from="1727489740749" duration="71000" />
       <workItem from="1727489822643" duration="66000" />
+      <workItem from="1729307863149" duration="672000" />
     </task>
     <servers />
   </component>
