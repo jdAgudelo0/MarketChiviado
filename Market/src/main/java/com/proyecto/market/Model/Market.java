@@ -1,8 +1,8 @@
 package com.proyecto.market.Model;
 
 import com.proyecto.market.Model.Enum.Estado;
-
 import java.util.ArrayList;
+import com.proyecto.market.Exceptions.ProductoException;
 
 public class Market {
     private ArrayList<Vendedor> vendedores;
@@ -30,14 +30,14 @@ public class Market {
     public void SugerirContacto(Vendedor vendedores){
     }
 
-    public void addProduct(Producto producto){
+    public void addProduct(Producto producto) throws ProductoException {
         if(producto==null){
             throw  new ProductoException("El personaje no puede ser nulo");
         }
         productos.add(producto);
     }
 
-    public void removeProduct(Producto producto){
+    public void removeProduct(Producto producto) throws ProductoException {
         if(producto==null){
             throw new ProductoException("El personaje no puede ser nulo");
         }if( producto.getEstado()== Estado.VENDIDO){
@@ -45,7 +45,7 @@ public class Market {
         }
     }
 
-    public void updateProduct(Producto productoActualizado, String codigo ){
+    public void updateProduct(Producto productoActualizado, String codigo ) throws ProductoException {
         if(productoActualizado == null){
             throw new ProductoException("El personaje no puede ser nulo");
         }for(Producto producto: productos){
