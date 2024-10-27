@@ -1,18 +1,20 @@
 package com.proyecto.market.Model;
 import com.proyecto.market.Model.Enum.Estado;
+
+import java.io.File;
 import java.util.ArrayList;
 
 public class Producto {
     private String nombreProducto;
     private String codigo;
-    private String imagen;
+    private File imagen;
     private String categoria;
     private float precio;
     private Estado estado ;
     private ArrayList<Comentario> comentarios;
     private int likes;
 
-    public Producto(String nombreProducto, String codigo, String imagen, String categoria, float precio, Estado estado) {
+    public Producto(String nombreProducto, String codigo, File imagen, String categoria, float precio, Estado estado) {
 
         this.nombreProducto= nombreProducto;
         this.codigo = codigo;
@@ -40,10 +42,10 @@ public class Producto {
         this.codigo = codigo;
     }
 
-    public String getImagen() {
+    public File getImagen() {
         return imagen;
     }
-    public void setImagen(String imagen) {
+    public void setImagen(File imagen) {
         this.imagen = imagen;
     }
     public String getCategoria() {

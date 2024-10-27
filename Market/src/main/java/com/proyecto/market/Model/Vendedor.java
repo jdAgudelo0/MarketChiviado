@@ -14,21 +14,55 @@ public class Vendedor implements AdministrarMensajes {
     private ArrayList<Vendedor> vendedoresAliados;
     private ArrayList<Vendedor> contactos;
     private Muro muro;
+    private String contrasenia;
+    private String usuario;
+
+
+
     private static final int CANTIDAD_MAXIMA_VENDEDORES_ALIADOS= 10;
 
     private ArrayList<Producto> productos;
 
-    public Vendedor(String nombre, String apellido, String cedula, ArrayList<Vendedor> vendedoresAliados, Muro muro){
+    public void setProductos(ArrayList<Producto> productos) {
+        this.productos = productos;
+    }
+
+    public ArrayList<Producto> getProductos() {
+        return productos;
+    }
+
+    public Vendedor(String nombre, String apellido, String cedula, String usuario, String contrasenia){
         this.nombre = nombre;
         this.apellido = apellido;
         this.cedula = cedula;
         this.vendedoresAliados = new ArrayList<Vendedor>();
         this.muro = muro;
         this.contactos = new ArrayList<Vendedor>();
+        this.usuario=usuario;
+        this.contrasenia=contrasenia;
     }
     public Vendedor() {}
 
+
     //getters y setters
+
+
+    public String getContrasenia() {
+        return contrasenia;
+    }
+
+    public void setContrasenia(String contrasenia) {
+        this.contrasenia = contrasenia;
+    }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
     public String getNombre() {
         return nombre;
     }

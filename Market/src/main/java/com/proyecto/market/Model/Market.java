@@ -18,13 +18,22 @@ public class Market {
         return market;
     }
 
-    public void registrarUsuario(String nombre, String apellidos, String cedula, String direccion, String usuario, String contraseña){
+    public void registrarUsuario(String nombre, String apellidos, String cedula,  String nombreUsuario, String contrasenia){
+        Vendedor usuario = new Vendedor(nombre, apellidos, cedula, nombreUsuario, contrasenia);
+        vendedores.add(usuario);
     }
 
     public void verificarDatos(){
     }
 
-    public void login(String Usuario, String contraseña){
+    public boolean login(String usuario, String contrasenia){
+        for (Vendedor vendedor: vendedores ){
+            if(vendedor.getUsuario().equals(usuario) && vendedor.getContrasenia().equals(contrasenia)){
+                return true;//Credenciales validas
+            }
+
+        }
+        return false;//Credenciales invalidas
     }
 
     public void SugerirContacto(Vendedor vendedores){
