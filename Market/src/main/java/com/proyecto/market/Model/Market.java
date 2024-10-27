@@ -18,9 +18,13 @@ public class Market {
         return market;
     }
 
-    public void registrarUsuario(String nombre, String apellidos, String cedula,  String nombreUsuario, String contrasenia){
-        Vendedor usuario = new Vendedor(nombre, apellidos, cedula, nombreUsuario, contrasenia);
-        vendedores.add(usuario);
+    public Market() {
+        this.vendedores=new ArrayList<>();
+        this.productos=new ArrayList<>();
+    }
+
+    public void registrarUsuario(Vendedor vendedor){
+        vendedores.add(vendedor);
     }
 
     public void verificarDatos(){

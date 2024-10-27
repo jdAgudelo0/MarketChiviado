@@ -14,7 +14,7 @@ public class main extends Application {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/com/proyecto/market/registro-view.fxml"));
             primaryStage.setTitle("Registro");
-            primaryStage.setScene(new Scene(root, 400, 600));
+            primaryStage.setScene(new Scene(root, 1024, 765));
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();
