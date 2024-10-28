@@ -10,12 +10,12 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="765.0" prefWidth="1024.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="765.0" prefWidth="1024.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto.market.View.InicioViewController">
     <children>
         <!-- Logo -->
         <VBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="20.0" spacing="10.0">
             <children>
-                <ImageView fitHeight="280.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="imgLogo" fitHeight="280.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@Imagenes/logo_market.png" />
                     </image>
@@ -26,37 +26,37 @@
         <!-- Formulario de Iniciar Sesión -->
         <VBox fx:id="Vb" alignment="CENTER" layoutX="312.0" layoutY="187.0" prefHeight="500.0" prefWidth="400.0" spacing="20.0" style="-fx-background-color: #f0f0f0; -fx-border-color: #9b9b9b; -fx-border-radius: 20; -fx-background-radius: 20; -fx-padding: 30; -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 5);">
             <children>
-                <Label style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #333; -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 2);" text="Iniciar Sesión" />
+                <Label fx:id="lbInicio" style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #333; -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 2);" text="Iniciar Sesión" />
 
                 <!-- Campo de usuario con icono -->
-                <HBox alignment="CENTER_LEFT" spacing="10.0" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: black; -fx-border-width: 1px; -fx-padding: 5;">
+                <HBox fx:id="HboxUsuario" alignment="CENTER_LEFT" spacing="10.0" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: black; -fx-border-width: 1px; -fx-padding: 5;">
                     <children>
-                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                        <ImageView fx:id="imgIcono1" fitHeight="20.0" fitWidth="20.0">
                             <image>
                                 <Image url="@Imagenes/icono_usuario.png" />
                             </image>
                         </ImageView>
-                        <TextField promptText="Ingrese el usuario" style="-fx-background-color: transparent; -fx-prompt-text-fill: derive(-fx-control-inner-background, -30%); -fx-padding: 10;" />
+                        <TextField fx:id="txtUsuario" promptText="Ingrese el usuario" style="-fx-background-color: transparent; -fx-prompt-text-fill: derive(-fx-control-inner-background, -30%); -fx-padding: 10;" />
                     </children>
                 </HBox>
 
                 <!-- Campo de contraseña con icono -->
-                <HBox alignment="CENTER_LEFT" spacing="10.0" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: black; -fx-border-width: 1px; -fx-padding: 5;">
+                <HBox fx:id="HbContrasenia" alignment="CENTER_LEFT" spacing="10.0" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: black; -fx-border-width: 1px; -fx-padding: 5;">
                     <children>
-                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                        <ImageView fx:id="imgIcono2" fitHeight="20.0" fitWidth="20.0">
                             <image>
                                 <Image url="@Imagenes/bloquear.png" />
                             </image>
                         </ImageView>
-                        <PasswordField promptText="Ingrese la contraseña" style="-fx-background-color: transparent; -fx-prompt-text-fill: derive(-fx-control-inner-background, -30%); -fx-padding: 10;" />
+                        <PasswordField fx:id="pfContrasenia" promptText="Ingrese la contraseña" style="-fx-background-color: transparent; -fx-prompt-text-fill: derive(-fx-control-inner-background, -30%); -fx-padding: 10;" />
                     </children>
                 </HBox>
 
                 <!-- Botón Continuar -->
-                <Button prefHeight="50.0" prefWidth="142.0" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 20; -fx-padding: 12 30 12 30; -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 2);" text="Continuar" />
+                <Button fx:id="btnContinuar" onAction="#continuar" prefHeight="50.0" prefWidth="142.0" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 20; -fx-padding: 12 30 12 30; -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 2);" text="Continuar" />
 
                 <!-- Botón Registrarse -->
-                <Button style="-fx-background-color: black; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 20; -fx-padding: 12 30 12 30; -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 2);" text="Registrarse" />
+                <Button fx:id="btnRegistrar" onAction="#registrar" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 20; -fx-padding: 12 30 12 30; -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 2);" text="Registrarse" />
             </children>
         </VBox>
     </children>

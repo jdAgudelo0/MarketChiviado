@@ -23,7 +23,10 @@ public class Market {
         this.productos=new ArrayList<>();
     }
 
-    public void registrarUsuario(Vendedor vendedor){
+    public void registrarUsuario(Vendedor vendedor) {
+        if (vendedores.stream().anyMatch(v -> v.getUsuario().equals(vendedor.getUsuario()))) {
+            throw new IllegalArgumentException("El usuario ya está registrado.");
+        }
         vendedores.add(vendedor);
     }
 

@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="400.0" prefWidth="628.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto.market.MensajeExitosoController">
+<AnchorPane prefHeight="400.0" prefWidth="628.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto.market.View.MensajeExitosoController">
    <children>
       <Label fx:id="lbBienvenido" layoutX="224.0" layoutY="79.0" prefHeight="59.0" prefWidth="251.0" style="-fx-font-weight: bold; -fx-font-size: 33px; -fx-text-fill: #333; -fx-alignment: center; -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 2);" text="BIENVENIDO" />
       <VBox fx:id="VbBandeja" layoutX="253.0" layoutY="149.0" prefHeight="73.0" prefWidth="362.0" style="-fx-border-color: #9b9b9b; -fx-background-color: #f0f0f0; -fx-border-radius: 15; -fx-background-radius: 15; -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 5); -fx-padding: 25;">
@@ -20,8 +20,8 @@
             <Image url="@Imagenes/logo_market.png" />
          </image>
       </ImageView>
-      <Button layoutX="278.0" layoutY="256.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" style="-fx-background-color: Black; -fx-border-radius: 15; -fx-background-radius: 15; -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 5);" text="Volver" textFill="WHITE" />
-      <Button layoutX="278.0" layoutY="311.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" style="-fx-background-color: black; -fx-border-radius: 15; -fx-background-radius: 15; -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 5);" text="Cerrar" textFill="WHITE" />
+      <Button fx:id="btnVolver" layoutX="278.0" layoutY="256.0" mnemonicParsing="false" onAction="#volver" prefHeight="26.0" prefWidth="72.0" style="-fx-background-color: Black; -fx-border-radius: 15; -fx-background-radius: 15; -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 5);" text="Volver" textFill="WHITE" />
+
 
    </children>
 </AnchorPane>
