@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="966a20cc-1235-4593-be1a-8e750c891eb5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Market/src/main/java/com/proyecto/market/Vendedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Market/src/main/java/com/proyecto/market/Administrador.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Market/src/main/java/com/proyecto/market/HelloApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Market/src/main/java/com/proyecto/market/HelloController.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Market/src/main/java/com/proyecto/market/Model/Administrador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +14,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -30,6 +33,9 @@
     &quot;accountId&quot;: &quot;eaa08b0e-9495-46a6-9bc0-8d2228e34c8d&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -41,10 +47,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Bill-Cypher",
+    "git-widget-placeholder": "Stefa",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/juanda/OneDrive/Escritorio/Programacion/ProyectoFinal/MarketChiviado",
+    "last_opened_file_path": "D:/Documents/GitHub/MarketChiviado/Market/src/main/java/com/proyecto/market/Model",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -56,6 +62,15 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Documents\GitHub\MarketChiviado\Market\src\main\java\com\proyecto\market\Model" />
+      <recent name="D:\Documents\GitHub\MarketChiviado\Market\src\main\java\com\proyecto\market\Model\Interface" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Documents\GitHub\MarketChiviado\Market\src\main\java\com\proyecto\market\Model" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
