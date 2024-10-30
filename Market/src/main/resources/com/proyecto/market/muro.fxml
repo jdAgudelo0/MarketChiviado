@@ -4,8 +4,8 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
-<?import javafx.scene.shape.Rectangle?>
 
 
 <AnchorPane prefHeight="765.0" prefWidth="1024.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto.market.View.MuroViewController">
@@ -21,18 +21,42 @@
          </image>
       </ImageView>
       <Line endX="-100.0" endY="-300.0" layoutX="474.0" layoutY="301.0" startX="-100.0" startY="464.70001220703125" />
-      <Line endX="-100.0" endY="-300.0" layoutX="900.0" layoutY="303.0" startX="-100.0" startY="462.0" />
+      <Line endX="-100.0" endY="-303.0" layoutX="900.0" layoutY="303.0" startX="-100.0" startY="462.0" />
       <TextField layoutX="512.0" layoutY="1.0" promptText="Buscar Producto" style="-fx-background-radius: 15; -fx-alignment: center; -fx-border-radius: 15; -fx-border-color: black;" />
       <ImageView fitHeight="19.0" fitWidth="30.0" layoutX="522.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Imagenes/lupa.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="150.0" layoutX="388.0" layoutY="79.0" stroke="BLACK" strokeType="INSIDE" width="180.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="150.0" layoutX="588.0" layoutY="79.0" stroke="BLACK" strokeType="INSIDE" width="180.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="150.0" layoutX="388.0" layoutY="265.0" stroke="BLACK" strokeType="INSIDE" width="180.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="150.0" layoutX="388.0" layoutY="448.0" stroke="BLACK" strokeType="INSIDE" width="180.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="150.0" layoutX="588.0" layoutY="265.0" stroke="BLACK" strokeType="INSIDE" width="180.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="150.0" layoutX="588.0" layoutY="448.0" stroke="BLACK" strokeType="INSIDE" width="180.0" />
+      <VBox layoutX="397.0" layoutY="91.0" prefHeight="138.0" prefWidth="178.0" style="-fx-background-color: #f0f0f0; -fx-border-color: #9b9b9b; -fx-background-radius: 15; -fx-border-radius: 15; -fx-alignment: center;">
+         <children>
+            <ImageView fitHeight="106.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </VBox>
+      <VBox layoutX="597.0" layoutY="314.0" prefHeight="138.0" prefWidth="178.0" style="-fx-background-color: #f0f0f0; -fx-border-color: #9b9b9b; -fx-background-radius: 15; -fx-border-radius: 15; -fx-alignment: center;">
+         <children>
+            <ImageView fitHeight="106.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </VBox>
+      <VBox layoutX="597.0" layoutY="91.0" prefHeight="138.0" prefWidth="178.0" style="-fx-background-color: #f0f0f0; -fx-border-color: #9b9b9b; -fx-background-radius: 15; -fx-border-radius: 15; -fx-alignment: center;">
+         <children>
+            <ImageView fitHeight="106.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </VBox>
+      <VBox layoutX="397.0" layoutY="315.0" prefHeight="138.0" prefWidth="178.0" style="-fx-background-color: #f0f0f0; -fx-border-color: #9b9b9b; -fx-background-radius: 15; -fx-border-radius: 15; -fx-alignment: center;">
+         <children>
+            <ImageView fitHeight="106.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </VBox>
+      <VBox layoutX="397.0" layoutY="517.0" prefHeight="138.0" prefWidth="178.0" style="-fx-background-color: #f0f0f0; -fx-border-color: #9b9b9b; -fx-background-radius: 15; -fx-border-radius: 15; -fx-alignment: center;">
+         <children>
+            <ImageView fitHeight="106.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </VBox>
+      <VBox layoutX="597.0" layoutY="517.0" prefHeight="138.0" prefWidth="178.0" style="-fx-background-color: #f0f0f0; -fx-border-color: #9b9b9b; -fx-background-radius: 15; -fx-border-radius: 15; -fx-alignment: center;">
+         <children>
+            <ImageView fitHeight="106.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
