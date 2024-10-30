@@ -29,19 +29,7 @@
     </void>
     <void property="vendedor">
      <object class="com.proyecto.market.Model.Vendedor">
-      <void property="apellido">
-       <string>3</string>
-      </void>
       <void property="cedula">
-       <string>3</string>
-      </void>
-      <void property="contrasenia">
-       <string>3</string>
-      </void>
-      <void property="nombre">
-       <string>3</string>
-      </void>
-      <void property="usuario">
        <string>3</string>
       </void>
      </object>

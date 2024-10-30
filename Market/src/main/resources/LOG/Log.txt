@@ -165,3 +165,7 @@ oct 30, 2024 2:24:25 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroL
 INFO: registro se esta agregando un vendedor 30/09/2024/2
 oct 30, 2024 2:25:05 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
 INFO: registro se esta agregando un producto 30/09/2024/2
+oct 30, 2024 2:35:51 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 30/09/2024/2
+oct 30, 2024 2:36:35 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: registro se agrega el admin 30/09/2024/2
