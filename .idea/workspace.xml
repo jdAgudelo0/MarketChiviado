@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="966a20cc-1235-4593-be1a-8e750c891eb5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Market/src/main/java/com/proyecto/market/Vendedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Market/src/main/java/com/proyecto/market/Administrador.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Market/src/main/java/com/proyecto/market/HelloApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Market/src/main/java/com/proyecto/market/HelloController.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Market/src/main/java/com/proyecto/market/Controller/ModelFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Market/src/main/java/com/proyecto/market/Controller/VendedorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Market/src/main/java/com/proyecto/market/Utils/ArchivoUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Market/src/main/java/com/proyecto/market/Utils/Persistencia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Market/src/main/java/com/proyecto/market/Model/Administrador.java" beforeDir="false" afterPath="$PROJECT_DIR$/Market/src/main/java/com/proyecto/market/Model/Administrador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Market/src/main/java/com/proyecto/market/Model/Vendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Market/src/main/java/com/proyecto/market/Model/Vendedor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Market/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Market/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,10 +44,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Bill-Cypher",
+    "git-widget-placeholder": "Agu",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/juanda/OneDrive/Escritorio/Programacion/ProyectoFinal/MarketChiviado",
+    "last_opened_file_path": "C:/Users/juanda/OneDrive/Escritorio/Programacion/ProyectoFinal/MarketChiviado/Market",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -59,8 +62,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.387" />
-        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.387" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
       </set>
     </attachedChunks>
   </component>
@@ -77,6 +80,7 @@
       <workItem from="1727486755281" duration="464000" />
       <workItem from="1727489740749" duration="71000" />
       <workItem from="1727489822643" duration="66000" />
+      <workItem from="1729993839085" duration="26000" />
     </task>
     <servers />
   </component>

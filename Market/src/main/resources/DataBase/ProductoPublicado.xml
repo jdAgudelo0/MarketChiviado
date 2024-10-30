@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="23.0.1" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="com.proyecto.market.Model.Producto">
+    <void property="categoria">
+     <object class="java.lang.Enum" method="valueOf">
+      <class>com.proyecto.market.Model.Enum.Categoria</class>
+      <string>HOGAR</string>
+     </object>
+    </void>
+    <void property="codigo">
+     <string>30ca2cea-0273-427e-b814-47bc4806993e</string>
+    </void>
+    <void property="estado">
+     <object class="java.lang.Enum" method="valueOf">
+      <class>com.proyecto.market.Model.Enum.Estado</class>
+      <string>PUBLICADO</string>
+     </object>
+    </void>
+    <void property="imagen">
+     <string>src\main\resources\Images\Product\30ca2cea-0273-427e-b814-47bc4806993e.png</string>
+    </void>
+    <void property="nombreProducto">
+     <string>gwen</string>
+    </void>
+    <void property="precio">
+     <float>12.0</float>
+    </void>
+    <void property="vendedor">
+     <object class="com.proyecto.market.Model.Vendedor">
+      <void property="apellido">
+       <string>3</string>
+      </void>
+      <void property="cedula">
+       <string>3</string>
+      </void>
+      <void property="contrasenia">
+       <string>3</string>
+      </void>
+      <void property="nombre">
+       <string>3</string>
+      </void>
+      <void property="usuario">
+       <string>3</string>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>

@@ -1,0 +1,2 @@
+9 %% 10 %% 9 %% 9 %% 9 %% src\main\resources\Images\Admins\9.jpg
+2 %% akali %% 2 %% 2 %% 2 %% src\main\resources\Images\Admins\2.jpg

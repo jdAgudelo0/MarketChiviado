@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="23.0.1" class="java.beans.XMLDecoder">
+ <object class="com.proyecto.market.Model.Market" id="Market0">
+  <void property="administradores">
+   <void method="add">
+    <object class="com.proyecto.market.Model.Administrador">
+     <void property="apellido">
+      <string>9</string>
+     </void>
+     <void property="cedula">
+      <string>9</string>
+     </void>
+     <void property="nombre">
+      <string>10</string>
+     </void>
+     <void property="password">
+      <string>9</string>
+     </void>
+     <void property="rutaImagen">
+      <string>src\main\resources\Images\Admins\9.jpg</string>
+     </void>
+     <void property="usuario">
+      <string>9</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="com.proyecto.market.Model.Administrador">
+     <void property="apellido">
+      <string>2</string>
+     </void>
+     <void property="cedula">
+      <string>2</string>
+     </void>
+     <void property="nombre">
+      <string>akali</string>
+     </void>
+     <void property="password">
+      <string>2</string>
+     </void>
+     <void property="rutaImagen">
+      <string>src\main\resources\Images\Admins\2.jpg</string>
+     </void>
+     <void property="usuario">
+      <string>2</string>
+     </void>
+    </object>
+   </void>
+  </void>
+ </object>
+</java>

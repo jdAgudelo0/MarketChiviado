@@ -3,10 +3,12 @@ package com.proyecto.market.Model;
 
 import com.proyecto.market.Model.Interface.AdministrarMensajes;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Chat implements AdministrarMensajes {
+public class Chat implements AdministrarMensajes, Serializable {
 
+    private static final long serialVersionUID = 1L;
     private Vendedor receptor;
     private Vendedor emisor;
     private String mensaje;
