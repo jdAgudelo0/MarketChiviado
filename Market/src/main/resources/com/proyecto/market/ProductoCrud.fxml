@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="443.0" prefWidth="928.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto.market.View.Crud.ProductoCrudViewController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f0ebeb" height="360.0" layoutX="28.0" layoutY="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="444.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f0ebeb" height="360.0" layoutX="503.0" layoutY="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="394.0" />
+      <GridPane layoutX="59.0" layoutY="127.0" prefHeight="136.0" prefWidth="202.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="49.4" minHeight="10.0" prefHeight="49.4" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="68.0000244140625" minHeight="10.0" prefHeight="49.6" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="89.20001220703125" minHeight="10.0" prefHeight="53.60000000000001" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TextField fx:id="txtNombre" promptText="Nombre Producto">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+            </TextField>
+            <ComboBox fx:id="cbxCategoria" prefHeight="26.0" prefWidth="206.0" promptText="Categoria" GridPane.rowIndex="2" />
+            <TextField fx:id="txtPrecio" promptText="Precio Producto" GridPane.rowIndex="1">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+            </TextField>
+         </children>
+      </GridPane>
+      <Text layoutX="144.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro" textAlignment="CENTER" wrappingWidth="212.79998779296875">
+         <font>
+            <Font name="Rockwell Condensed" size="40.0" />
+         </font>
+      </Text>
+      <Button layoutX="127.0" layoutY="345.0" mnemonicParsing="false" onAction="#crearProducto" prefHeight="26.0" prefWidth="102.0" style="-fx-background-color: black;" text="Crear Producto" textAlignment="CENTER" textFill="WHITE" />
+      <TableView fx:id="tblAdmins" layoutX="531.0" layoutY="71.0" prefHeight="248.0" prefWidth="338.0">
+         <columns>
+            <TableColumn prefWidth="236.7999267578125" text="Tabla Productos">
+               <columns>
+                  <TableColumn fx:id="tlCodigo" prefWidth="88.0" text="Codigo" />
+                  <TableColumn fx:id="tlNombre" prefWidth="80.79998779296875" text="Nombre" />
+                  <TableColumn fx:id="tlPrecio" prefWidth="92.0" text="Precio" />
+                  <TableColumn fx:id="tlCategoria" prefWidth="75.0" text="Categoria" />
+               </columns>
+            </TableColumn>
+         </columns>
+      </TableView>
+      <ImageView fx:id="imagenPerfil" fitHeight="129.0" fitWidth="166.0" layoutX="292.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="333.0" layoutY="269.0" mnemonicParsing="false" onAction="#seleccionarImagen" prefHeight="44.0" prefWidth="84.0" style="-fx-background-color: black;" text="Seleccionar Imagen" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+      <GridPane layoutX="582.0" layoutY="343.0" prefHeight="30.0" prefWidth="263.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" onAction="#eliminarProducto" prefHeight="26.0" prefWidth="102.0" style="-fx-background-color: black;" text="Eliminar Producto" textAlignment="CENTER" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#actualizarProducto" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: black;" text="Actualizar Producto" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <Button layoutX="284.0" layoutY="345.0" mnemonicParsing="false" onAction="#limpiarCampos" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: black;" text="Limpiar" textAlignment="CENTER" textFill="WHITE" />
+   </children>
+</AnchorPane>

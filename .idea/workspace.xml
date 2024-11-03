@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="966a20cc-1235-4593-be1a-8e750c891eb5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Market/src/main/java/com/proyecto/market/Model/Administrador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Market/src/main/java/com/proyecto/market/Controller/ModelFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Market/src/main/java/com/proyecto/market/Controller/VendedorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Market/src/main/java/com/proyecto/market/Utils/ArchivoUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Market/src/main/java/com/proyecto/market/Utils/Persistencia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Market/src/main/java/com/proyecto/market/Model/Administrador.java" beforeDir="false" afterPath="$PROJECT_DIR$/Market/src/main/java/com/proyecto/market/Model/Administrador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Market/src/main/java/com/proyecto/market/Model/Vendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Market/src/main/java/com/proyecto/market/Model/Vendedor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Market/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Market/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,11 +19,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -33,9 +33,6 @@
     &quot;accountId&quot;: &quot;eaa08b0e-9495-46a6-9bc0-8d2228e34c8d&quot;
   }
 }</component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -47,10 +44,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Stefa",
+    "git-widget-placeholder": "Agu",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Documents/GitHub/MarketChiviado/Market/src/main/java/com/proyecto/market/Model",
+    "last_opened_file_path": "C:/Users/juanda/OneDrive/Escritorio/Programacion/ProyectoFinal/MarketChiviado/Market",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -62,20 +59,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Documents\GitHub\MarketChiviado\Market\src\main\java\com\proyecto\market\Model" />
-      <recent name="D:\Documents\GitHub\MarketChiviado\Market\src\main\java\com\proyecto\market\Model\Interface" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Documents\GitHub\MarketChiviado\Market\src\main\java\com\proyecto\market\Model" />
-    </key>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.387" />
-        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.387" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
       </set>
     </attachedChunks>
   </component>
@@ -92,6 +80,7 @@
       <workItem from="1727486755281" duration="464000" />
       <workItem from="1727489740749" duration="71000" />
       <workItem from="1727489822643" duration="66000" />
+      <workItem from="1729993839085" duration="26000" />
     </task>
     <servers />
   </component>

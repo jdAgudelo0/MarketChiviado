@@ -1,24 +1,30 @@
-package com.proyecto.market;
+package com.proyecto.market.Model;
 
-import java.time.LocalDate;
+import java.io.Serializable;
 
-public class Administrador{
+
+public class Administrador implements Serializable{
+    private static final long serialVersionUID = 1L;
     private String nombre;
     private String apellido;
     private String cedula;
+    private String usuario;
     private String correo;
     private String password;
-    private Image foto;
-    private Market market;
+    private String rutaImagen;
 
-    public Administrador(String nombre, String apellido, String cedula, String correo, String password, Image foto, Market market) {
+
+    public Administrador(String nombre, String apellido, String cedula, String usuario, String correo, String password, String rutaImagen) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.cedula = cedula;
+        this.usuario = usuario;
         this.correo = correo;
         this.password = password;
-        this.foto = foto;
-        this.market = market;
+        this.rutaImagen = rutaImagen;
+    }
+
+    public Administrador() {
     }
 
     public String getNombre() {
@@ -61,19 +67,17 @@ public class Administrador{
         this.password = password;
     }
 
-    public Image getFoto() {
-        return foto;
+    public String getUsuario() { return usuario; }
+
+    public void setUsuario(String usuario) { this.usuario = usuario; }
+
+    public String getRutaImagen() {
+        return rutaImagen;
     }
 
-    public void setFoto(Image foto) {
-        this.foto = foto;
-    }
-
-    public Market getMarket() {
-        return market;
-    }
-
-    public void setMarket(Market market) {
-        this.market = market;
+    public void setRutaImagen(String rutaImagen) {
+        this.rutaImagen = rutaImagen;
     }
 }
+
+

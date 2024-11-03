@@ -1,30 +1,38 @@
 package com.proyecto.market.Model;
+import com.proyecto.market.Model.Enum.Categoria;
 import com.proyecto.market.Model.Enum.Estado;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Producto {
+public class Producto implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     private String nombreProducto;
     private String codigo;
     private String imagen;
-    private String categoria;
+    private Categoria categoria;
     private float precio;
     private Estado estado ;
-    private ArrayList<Comentario> comentarios;
+    private ArrayList<Comentario> comentarios = new ArrayList<>();
+    private Vendedor vendedor;
     private int likes;
 
-    public Producto(String nombreProducto, String codigo, String imagen, String categoria, float precio, Estado estado) {
-
-        this.nombreProducto= nombreProducto;
+    public Producto(String nombreProducto, String codigo, String imagen, Categoria categoria, float precio, Estado estado, ArrayList<Comentario> comentarios, Vendedor vendedor, int likes) {
+        this.nombreProducto = nombreProducto;
         this.codigo = codigo;
         this.imagen = imagen;
         this.categoria = categoria;
         this.precio = precio;
         this.estado = estado;
-        this.comentarios = new ArrayList<Comentario>();
-        this.likes = 0;
+        this.comentarios = comentarios;
+        this.vendedor = vendedor;
+        this.likes = likes;
     }
 
     public Producto() {}
+
 
     public String getNombreProducto() {
         return nombreProducto;
@@ -46,10 +54,12 @@ public class Producto {
     public void setImagen(String imagen) {
         this.imagen = imagen;
     }
-    public String getCategoria() {
+
+    public Categoria getCategoria() {
         return categoria;
     }
-    public void setCategoria(String categoria) {
+
+    public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
     }
 
@@ -80,5 +90,13 @@ public class Producto {
     }
     public void setLikes(int likes) {
         this.likes = likes;
+    }
+
+    public Vendedor getVendedor() {
+        return vendedor;
+    }
+
+    public void setVendedor(Vendedor vendedor) {
+        this.vendedor = vendedor;
     }
 }
