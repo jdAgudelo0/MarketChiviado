@@ -6,6 +6,7 @@ import com.proyecto.market.Model.Enum.Estado;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.stream.Stream;
 
 public class Market implements Serializable {
@@ -117,18 +118,31 @@ public class Market implements Serializable {
         Vendedor vendedor = hallarVendedor(producto.getVendedor().getCedula());
         vendedor.getProductos().add(producto);}
 
+
     public void removeProduct(Producto producto) throws ProductoException {
-        if(producto==null){
+        if (producto == null) {
             throw new ProductoException("El producto no puede ser nulo");
-        }else if(producto.getEstado() != Estado.VENDIDO){
+        } else if (producto.getEstado() != Estado.VENDIDO) {
             Vendedor vendedor = hallarVendedor(producto.getVendedor().getCedula());
             ArrayList<Producto> productos1 = vendedor.getProductos();
-            for (Producto producto2 : productos1) {
+
+            // Usamos un Iterator para eliminar de manera segura
+            Iterator<Producto> iterator = productos1.iterator();
+            while (iterator.hasNext()) {
+                Producto producto2 = iterator.next();
                 if (producto2.getCodigo().equals(producto.getCodigo())) {
-                    productos1.remove(producto2);}
+                    iterator.remove(); // Eliminación segura usando el iterador
+                }
             }
+
+            // Actualizamos la lista de productos del vendedor
             vendedor.setProductos(productos1);
-            productos.remove(producto);}}
+
+            // También eliminamos el producto de la lista general
+            productos.remove(producto);
+        }
+    }
+
 
 
     public void updateProduct(Producto productoActualizado, String codigo ) throws ProductoException {

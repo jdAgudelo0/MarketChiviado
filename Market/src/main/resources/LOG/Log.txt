@@ -169,3 +169,55 @@ oct 30, 2024 2:35:51 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroL
 INFO: Ah Iniciado Sesion Inicio De Sesion 30/09/2024/2
 oct 30, 2024 2:36:35 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
 INFO: registro se agrega el admin 30/09/2024/2
+oct 30, 2024 3:44:25 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 30/09/2024/3
+oct 30, 2024 3:46:27 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 30/09/2024/3
+oct 30, 2024 3:46:57 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: registro se esta agregando un vendedor 30/09/2024/3
+oct 30, 2024 3:48:10 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: registro se esta agregando un producto 30/09/2024/3
+oct 30, 2024 3:49:53 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 30/09/2024/3
+oct 30, 2024 3:50:17 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+WARNING: actualizar se esta actualizando el producto 30/09/2024/3
+oct 30, 2024 10:21:05 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 30/09/2024/10
+oct 30, 2024 10:22:19 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 30/09/2024/10
+oct 30, 2024 10:35:17 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 30/09/2024/10
+oct 30, 2024 10:38:44 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 30/09/2024/10
+oct 30, 2024 10:39:41 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: registro se esta agregando un vendedor 30/09/2024/10
+oct 30, 2024 10:41:46 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 30/09/2024/10
+oct 30, 2024 10:42:50 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: registro se agrega el admin 30/09/2024/10
+oct 30, 2024 10:43:13 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+WARNING: actualizar se esta actualizando el admin 30/09/2024/10
+nov 01, 2024 8:46:14 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 01/10/2024/8
+nov 01, 2024 10:01:34 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 01/10/2024/10
+nov 01, 2024 10:03:30 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 01/10/2024/10
+nov 01, 2024 11:27:11 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 01/10/2024/11
+nov 01, 2024 11:35:54 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 01/10/2024/11
+nov 02, 2024 12:10:11 A.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 02/10/2024/0
+nov 02, 2024 12:15:21 A.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 02/10/2024/0
+nov 02, 2024 12:18:12 A.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 02/10/2024/0
+nov 02, 2024 12:18:57 A.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: registro se agrega el admin 02/10/2024/0
+nov 02, 2024 8:24:44 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 02/10/2024/8
+nov 02, 2024 8:24:46 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 02/10/2024/8
+nov 02, 2024 8:25:43 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: registro se esta agregando un producto 02/10/2024/8

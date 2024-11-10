@@ -46,6 +46,28 @@
      </void>
     </object>
    </void>
+   <void method="add">
+    <object class="com.proyecto.market.Model.Administrador">
+     <void property="apellido">
+      <string>6</string>
+     </void>
+     <void property="cedula">
+      <string>6</string>
+     </void>
+     <void property="nombre">
+      <string>6</string>
+     </void>
+     <void property="password">
+      <string>6</string>
+     </void>
+     <void property="rutaImagen">
+      <string>src/main/resources/Images/Admins/PerfilErroError.png</string>
+     </void>
+     <void property="usuario">
+      <string>6</string>
+     </void>
+    </object>
+   </void>
   </void>
   <void property="productos">
    <void method="add">
@@ -53,11 +75,11 @@
      <void property="categoria">
       <object class="java.lang.Enum" method="valueOf">
        <class>com.proyecto.market.Model.Enum.Categoria</class>
-       <string>HOGAR</string>
+       <string>DEPORTE</string>
       </object>
      </void>
      <void property="codigo">
-      <string>30ca2cea-0273-427e-b814-47bc4806993e</string>
+      <string>6c471cf3-945c-4a43-8093-16b075cbacc3</string>
      </void>
      <void property="estado">
       <object class="java.lang.Enum" method="valueOf">
@@ -66,18 +88,18 @@
       </object>
      </void>
      <void property="imagen">
-      <string>src\main\resources\Images\Product\30ca2cea-0273-427e-b814-47bc4806993e.png</string>
+      <string>src\main\resources\Images\Product\6c471cf3-945c-4a43-8093-16b075cbacc3.jpg</string>
      </void>
      <void property="nombreProducto">
-      <string>gwen</string>
+      <string>q</string>
      </void>
      <void property="precio">
-      <float>12.0</float>
+      <float>100.0</float>
      </void>
      <void property="vendedor">
       <object class="com.proyecto.market.Model.Vendedor">
        <void property="cedula">
-        <string>3</string>
+        <string>1092</string>
        </void>
       </object>
      </void>
@@ -86,7 +108,7 @@
   </void>
   <void property="vendedores">
    <void method="add">
-    <object class="com.proyecto.market.Model.Vendedor" id="Vendedor0">
+    <object class="com.proyecto.market.Model.Vendedor">
      <void property="apellido">
       <string>3</string>
      </void>
@@ -99,13 +121,51 @@
      <void property="nombre">
       <string>3</string>
      </void>
+     <void property="usuario">
+      <string>3</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="com.proyecto.market.Model.Vendedor" id="Vendedor0">
+     <void property="apellido">
+      <string>bermudez</string>
+     </void>
+     <void property="cedula">
+      <string>1092</string>
+     </void>
+     <void property="contrasenia">
+      <string>1234567</string>
+     </void>
+     <void property="nombre">
+      <string>zeri</string>
+     </void>
      <void property="productos">
       <void method="add">
        <object idref="Producto0"/>
       </void>
      </void>
      <void property="usuario">
-      <string>3</string>
+      <string>zerilol</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="com.proyecto.market.Model.Vendedor">
+     <void property="apellido">
+      <string>agudelo</string>
+     </void>
+     <void property="cedula">
+      <string>1091</string>
+     </void>
+     <void property="contrasenia">
+      <string>1234567</string>
+     </void>
+     <void property="nombre">
+      <string>juan</string>
+     </void>
+     <void property="usuario">
+      <string>porque</string>
      </void>
     </object>
    </void>
