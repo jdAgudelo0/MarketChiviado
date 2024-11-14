@@ -1,19 +1,19 @@
 package com.proyecto.market.View;
 
+import com.proyecto.market.Controller.LogginController;
 import com.proyecto.market.Model.Market;
+import com.proyecto.market.main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -53,60 +53,94 @@ public class InicioViewController {
     @FXML
     private TextField txtUsuario;
 
-    private Market market;
+    private LogginController controller;
 
     @FXML
     public void initialize() {
-        market = Market.getInstance(); // o cualquier lógica para obtener la instancia de Market
-        System.out.println(market);//Para depuracion, depués borrar
+        controller = new LogginController();
     }
 
-    public void continuar(ActionEvent actionEvent) {
-        String usuario = txtUsuario.getText().trim();
-        String contrasenia = pfContrasenia.getText().trim();
 
-        System.out.println("Usuario: " + usuario); // Para depuración
-        System.out.println("Contraseña: " + contrasenia); // Para depuración
 
-        boolean loggedIn = market.login(usuario, contrasenia);//Para depuracion, depués borrar
-        System.out.println("Login attempt: " + loggedIn);//Para depuracion, depués borrar
 
-        if (loggedIn) {
-            System.out.println("Login exitoso");
-            // Aquí carga la siguiente escena
-        } else {
-            System.out.println("Login fallido. mirar credenciales.");
-            // Mostrar mensaje de error
-        }
-    }
+    @FXML
+    public void registrar(ActionEvent event) throws IOException {
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        currentStage.close();
 
-    public Market getMarket() {
-        return market;
-    }
-
-    public void setMarket(Market market) {
-        this.market = market;
-    }
-
-    public void registrar(ActionEvent actionEvent){
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/proyecto/market/registro-view.fxml"));
+        //Intenta abrir el inicio sesion
+        try{
+            FXMLLoader loader= new FXMLLoader(getClass().getResource("/com/proyecto/market/registro.fxml"));
             Parent root = loader.load();
-            RegistroViewController controller = loader.getController();
-            controller.setMarket(market);
-            Stage stage = new Stage();
-            stage.setTitle("Registro ");
-            stage.setScene(new Scene(root, 1024, 765));
+            Stage stage= new Stage();
+            stage.setTitle("Inicio sesion");
+            stage.setScene(new Scene(root));
             stage.show();
-
-            // Cerrar la ventana actual de registro si deseas
-            Stage currentStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            currentStage.close();
-
-        } catch (IOException e) {
+        }catch (IOException e){
             e.printStackTrace();
-        }
 
+        }
+    }
+
+    @FXML
+    void continuar(ActionEvent event) throws IOException {
+
+        if (verificarCampo()){
+
+            int opciones = controller.loggin(txtUsuario.getText(),pfContrasenia.getText());
+
+            switch (opciones){
+
+                case 1: cambiarVentana("ProductoCrud.fxml",event);
+                    break;
+
+                case 2: cambiarVentana("AdminCrud.View.fxml",event);
+                    break;
+
+                case 0: mostrarMensaje("Error Al Iniciar Sesion","Error con los datos","El Usuario"+
+                        "o Contraseña no han sido registrados", Alert.AlertType.ERROR);
+                    break;
+            }}}
+
+    private void mostrarMensaje(String titulo, String header, String contenido, Alert.AlertType alertType) {
+        Alert aler = new Alert(alertType);
+        aler.setTitle(titulo);
+        aler.setHeaderText(header);
+        aler.setContentText(contenido);
+        aler.showAndWait();
+    }
+
+    private boolean verificarCampo() {
+        String mensaje = "";
+        if (txtUsuario.getText().isEmpty() || txtUsuario == null)
+            mensaje += "Ingrese el campo de UserName\n";
+        if (pfContrasenia.getText().isEmpty() || pfContrasenia == null) {
+            mensaje += "Ingrese el campo de Password\n";
+        }
+        if (mensaje==""){
+            return true;
+        }else {
+            mostrarMensaje("Datos incorrectos","Datos invalidos",mensaje, Alert.AlertType.ERROR);
+            return false;
+        }
+    }
+
+    public void cambiarVentana(String nombreFxml,ActionEvent event) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(main.class.getResource(nombreFxml));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        // Obtener la referencia a la ventana actual
+        Stage stageActual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stageActual.close(); // Cerrar la ventana actual
+
+        // Abrir la nueva ventana
+        Stage stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setScene(scene);
+        stage.showAndWait();
     }
 
 }

@@ -1,11 +1,13 @@
 package com.proyecto.market.Model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Estadisticas {
+public class Estadisticas implements Serializable {
 
+    private static final long serialVersionUID = 1L;
     private ArrayList<Venta> ventas;
     private Producto producto;
 

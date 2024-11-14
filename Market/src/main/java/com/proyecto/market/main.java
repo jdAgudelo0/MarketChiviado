@@ -26,12 +26,6 @@ public class main extends Application {
 
     public static void main(String[] args) {
         launch(args);
-        Market market= Market.getInstance();
-        Vendedor vendedor= new Vendedor("Juan", " rodriguez", " 11231231", " Juan12", " 12Juan12");
-        market.registrarUsuario(vendedor);
-        if(market.login("Juan12", "12Juan12")){
-            System.out.println("Si esta registrado");
-        }
+
     }
 }
-

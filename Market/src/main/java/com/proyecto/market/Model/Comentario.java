@@ -1,8 +1,11 @@
 package com.proyecto.market.Model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Comentario {
+public class Comentario implements Serializable {
+
+    private static final long serialVersionUID = 1L;
     private String mensaje;
     private LocalDate fechaPublicacion;
 

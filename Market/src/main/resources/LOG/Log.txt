@@ -1,0 +1,16 @@
+nov 13, 2024 10:13:27 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 13/10/2024/10
+nov 13, 2024 10:15:43 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 13/10/2024/10
+nov 13, 2024 10:23:20 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 13/10/2024/10
+nov 13, 2024 10:24:12 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 13/10/2024/10
+nov 13, 2024 11:02:50 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 13/10/2024/11
+nov 13, 2024 11:03:04 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 13/10/2024/11
+nov 13, 2024 11:04:12 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 13/10/2024/11
+nov 13, 2024 11:06:06 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 13/10/2024/11

@@ -1,18 +1,20 @@
 package com.proyecto.market.View;
 
-import com.proyecto.market.Model.Market;
+
+import com.proyecto.market.Controller.VendedorController;
+import com.proyecto.market.Exceptions.VendedorException;
 import com.proyecto.market.Model.Vendedor;
+import com.proyecto.market.Utils.TextFormatterUtil;
+import com.proyecto.market.main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -45,73 +47,94 @@ public class RegistroViewController {
 
     @FXML
     private TextField txtUsuario;
+    private VendedorController vendedorController;
 
-    private Market market;
 
-    public Market getMarket() {
-        return market;
-    }
-
-    public void setMarket(Market market) {
-        this.market = market;
-    }
 
     @FXML
     public void initialize() {
-        market = Market.getInstance();// o cualquier lógica para obtener la instancia de Market
-        System.out.println(market);//Para depuracion, depués borrar
+        vendedorController= new VendedorController();
+        txtId.setTextFormatter(new TextFormatter<>(TextFormatterUtil::integerFormat));
     }
 
     //boton crear cuenta tiene la logica para registrar el usuario y una vez registrado pasa a un mensaje en otra stage
     @FXML
-    public void crearCuenta(ActionEvent actionEvent) {
-        if (validarInformacion()) {
-            // Registrar el usuario
-            market.registrarUsuario(new Vendedor(txtNombre.getText(), txtApellidos.getText(), txtId.getText(), txtUsuario.getText(),txtContrasenia.getText()));
-
-            // Cargar y mostrar la nueva ventana de registro exitoso
-            try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/proyecto/market/mensajeExitoso.fxml"));
-                Parent root = loader.load();
-                MensajeExitosoController controller=loader.getController();
-                controller.setMarket(Market.getInstance());
-                Stage stage = new Stage();
-                stage.setTitle("Registro Exitoso");
-                stage.setScene(new Scene(root, 628, 400));
-                stage.show();
-
-                // Cerrar la ventana actual de registro si deseas
-                Stage currentStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-                currentStage.close();
-
-            } catch (IOException e) {
-                e.printStackTrace();
+    void crearCuenta(ActionEvent event) throws VendedorException, IOException {
+        if (verificarCampos(crearVendedor())){
+            if(vendedorController.crearVendedor(crearVendedor()) == 1){
+                mostrarMensaje("Notificacion","Vendedor Creado", "EL Vendedor se ha creado con exito", Alert.AlertType.INFORMATION);
+                cambiarVentana("mensajeExitoso.fxml", event);
+            }else{
+                mostrarMensaje("Noticicacion", "Vendedor no creado","El Vendedor no se ah creado", Alert.AlertType.ERROR);
             }
-        } else {
-            System.out.println("Datos invalidos");
         }
     }
 
 
 
     //Metodo auxiliar para la validacion de la informacion del formulario.
-    public boolean validarInformacion() {
-        if (txtNombre.getText() == null || txtNombre.getText().isEmpty()) {
-            System.out.println("Nombre no puede estar vacío");//para depuracion, se debe colocar como un mensaje en la interfaz
+    private boolean verificarCampos(Vendedor vendedor){
+        String mensaje = "";
+
+        if (vendedor.getNombre() == null || txtNombre.getText().equals(""))
+            mensaje += "El nombre es invalido \n";
+
+        if (vendedor.getApellido() == null || txtApellidos.getText().equals(""))
+            mensaje += "El apellido es invalido \n";
+
+        if (vendedor.getCedula() == null || txtId.getText().equals(""))
+            mensaje += "La cedula es invalido \n";
+
+        if (vendedor.getUsuario() == null || txtUsuario.getText().equals(""))
+            mensaje += "El username es invalido \n";
+
+        if (vendedor.getContrasenia() == null || txtContrasenia.getText().equals(""))
+            mensaje += "El password es invalido \n";
+
+        if (mensaje.equals("")) {
+
+            return true;
+
+        } else {
+            mostrarMensaje("Notificacion","Datos Invalidos",mensaje, Alert.AlertType.ERROR);
             return false;
         }
-        if (txtApellidos.getText() == null || txtApellidos.getText().isEmpty()) {
-            System.out.println("Apellidos no pueden estar vacíos");//para depuracion, se debe colocar como un mensaje en la interfaz
-            return false;
-        }
-        if (txtUsuario.getText() == null || txtUsuario.getText().isEmpty()) {
-            System.out.println("Usuario no puede estar vacío");//para depuracion, se debe colocar como un mensaje en la interfaz
-            return false;
-        }
-        if (txtContrasenia.getText().length() < 7) {
-            System.out.println("La contraseña debe tener al menos 7 caracteres");//para depuracion, se debe colocar como un mensaje en la interfaz
-            return false;
-        }
-        return true;
+    }
+
+
+    public Vendedor crearVendedor(){
+        Vendedor vendedor = new Vendedor();
+        vendedor.setNombre(txtNombre.getText());
+        vendedor.setApellido(txtApellidos.getText());
+        vendedor.setCedula(txtId.getText());
+        vendedor.setUsuario(txtUsuario.getText());
+        vendedor.setContrasenia(txtContrasenia.getText());
+        return vendedor;
+    }
+    private void mostrarMensaje (String titulo, String header, String contenido, Alert.AlertType alertType){
+
+        Alert alert = new Alert(alertType);
+        alert.setTitle(titulo);
+        alert.setHeaderText(header);
+        alert.setContentText(contenido);
+        alert.showAndWait();
+
+    }
+    public void cambiarVentana(String nombreFxml,ActionEvent event) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(main.class.getResource(nombreFxml));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        // Obtener la referencia a la ventana actual
+        Stage stageActual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stageActual.close(); // Cerrar la ventana actual
+
+        // Abrir la nueva ventana
+        Stage stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setScene(scene);
+        stage.showAndWait();
     }
 }

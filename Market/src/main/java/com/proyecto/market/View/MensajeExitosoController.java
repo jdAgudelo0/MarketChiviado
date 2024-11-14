@@ -20,15 +20,6 @@ public class MensajeExitosoController {
     @FXML
     private VBox VbBandeja;
 
-    public Market getMarket() {
-        return market;
-    }
-
-    public void setMarket(Market market) {
-        this.market = market;
-    }
-
-
     @FXML
     private Button btnVolver;
 
@@ -41,12 +32,11 @@ public class MensajeExitosoController {
     @FXML
     private Label lbMensaje;
 
-    private Market market;
+
 
     @FXML
     public void initialize(){
-        market=Market.getInstance();
-        System.out.println(market);//Para depuracion, depués borrar
+
     }
     @FXML
     public void volver(ActionEvent actionEvent){

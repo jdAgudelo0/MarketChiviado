@@ -1,4 +1,4 @@
-package com.proyecto.market.controller;
+package com.proyecto.market.Controller;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;

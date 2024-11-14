@@ -1,6 +1,8 @@
 module com.proyecto.market {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.desktop;
+    requires java.logging;
 
     opens com.proyecto.market to javafx.fxml; // Para la clase principal, si es necesario
     exports com.proyecto.market; // Exporta tu paquete principal
