@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import java.lang.String?>
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.proyecto.market.View.AmistadesView"
+            prefHeight="600.0" prefWidth="800.0">
+
+    <!-- Panel Izquierdo -->
+    <VBox spacing="10" layoutX="20.0" layoutY="20.0" prefWidth="250.0" prefHeight="560.0">
+        <Label text="Vendedores Aliados (10)" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+        <ListView fx:id="vendedoresAliadosList" prefHeight="500.0" />
+    </VBox>
+
+    <!-- Panel Derecho -->
+    <VBox spacing="10" layoutX="300.0" layoutY="20.0" prefWidth="450.0" prefHeight="560.0">
+        <Label text="Solicitudes Vendedores" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+        <ListView fx:id="solicitudesList" prefHeight="500.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Sin solicitudes" />
+                </FXCollections>
+            </items>
+        </ListView>
+    </VBox>
+
+</AnchorPane>

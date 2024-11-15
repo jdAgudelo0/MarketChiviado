@@ -50,7 +50,6 @@ public class RegistroViewController {
     private VendedorController vendedorController;
 
 
-
     @FXML
     public void initialize() {
         vendedorController= new VendedorController();

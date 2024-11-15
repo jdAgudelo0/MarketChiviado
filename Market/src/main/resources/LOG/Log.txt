@@ -14,33 +14,3 @@ nov 13, 2024 11:04:12 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistro
 INFO: Ah Iniciado Sesion Inicio De Sesion 13/10/2024/11
 nov 13, 2024 11:06:06 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
 INFO: Ah Iniciado Sesion Inicio De Sesion 13/10/2024/11
-nov 13, 2024 11:08:30 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
-INFO: registro se esta agregando un vendedor 13/10/2024/11
-nov 13, 2024 11:09:00 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
-INFO: Ah Iniciado Sesion Inicio De Sesion 13/10/2024/11
-nov 14, 2024 10:57:34 A.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
-INFO: Ah Iniciado Sesion Inicio De Sesion 14/10/2024/10
-nov 14, 2024 11:03:22 A.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
-INFO: Ah Iniciado Sesion Inicio De Sesion 14/10/2024/11
-nov 14, 2024 11:08:07 A.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
-INFO: Ah Iniciado Sesion Inicio De Sesion 14/10/2024/11
-nov 14, 2024 11:10:47 A.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
-INFO: Ah Iniciado Sesion Inicio De Sesion 14/10/2024/11
-nov 14, 2024 11:26:50 A.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
-INFO: Ah Iniciado Sesion Inicio De Sesion 14/10/2024/11
-nov 14, 2024 11:27:20 A.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
-INFO: registro se agrega el admin 14/10/2024/11
-nov 14, 2024 11:27:52 A.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
-INFO: Ah Iniciado Sesion Inicio De Sesion 14/10/2024/11
-nov 14, 2024 11:36:42 A.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
-INFO: Ah Iniciado Sesion Inicio De Sesion 14/10/2024/11
-nov 14, 2024 11:37:08 A.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
-INFO: registro se esta agregando un vendedor 14/10/2024/11
-nov 14, 2024 2:15:44 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
-INFO: Ah Iniciado Sesion Inicio De Sesion 14/10/2024/2
-nov 14, 2024 2:16:21 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
-INFO: registro se esta agregando un vendedor 14/10/2024/2
-nov 14, 2024 2:20:29 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
-INFO: Ah Iniciado Sesion Inicio De Sesion 14/10/2024/2
-nov 14, 2024 2:33:46 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
-INFO: Ah Iniciado Sesion Inicio De Sesion 14/10/2024/2
