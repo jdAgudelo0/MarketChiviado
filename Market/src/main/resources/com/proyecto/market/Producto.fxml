@@ -12,7 +12,7 @@
 
 <AnchorPane prefHeight="566.0" prefWidth="758.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto.market.Producto">
    <children>
-      <ImageView fitHeight="99.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="98.0" fitWidth="178.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../../../../../Downloads/wImage@1x%20(2).png" />
          </image>
