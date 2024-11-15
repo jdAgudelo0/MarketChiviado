@@ -41,7 +41,7 @@
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="486.0" layoutY="251.0" prefHeight="43.0" prefWidth="143.0" style="-fx-border-color: pink;" text="   Resumen de compra" textAlignment="CENTER" wrapText="true">
+      <Label layoutX="432.0" layoutY="272.0" prefHeight="24.0" prefWidth="255.0" style="-fx-border-color: pink;" text="                 Resumen de compra" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
