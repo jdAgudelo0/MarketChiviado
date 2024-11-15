@@ -1,5 +1,6 @@
 package com.proyecto.market;
 
+import com.proyecto.market.Model.Administrador;
 import com.proyecto.market.Model.Market;
 import com.proyecto.market.Model.Vendedor;
 import javafx.application.Application;
@@ -26,6 +27,7 @@ public class main extends Application {
 
     public static void main(String[] args) {
         launch(args);
+        Administrador administrador= new Administrador( "Juan",  "Garcia",  "100213123",  "Juanito",  "Juanito1223",  "12345",  "rutaImagen");
 
     }
 }

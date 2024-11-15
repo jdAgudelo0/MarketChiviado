@@ -91,7 +91,7 @@ public class InicioViewController {
 
             switch (opciones){
 
-                case 1: cambiarVentana("ProductoCrud.fxml",event);
+                case 1: cambiarVentana("muro.fxml",event);
                     break;
 
                 case 2: cambiarVentana("AdminCrud.View.fxml",event);
