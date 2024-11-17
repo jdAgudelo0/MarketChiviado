@@ -17,7 +17,7 @@
       </VBox>
       <ImageView fx:id="imgLogo" fitHeight="235.0" fitWidth="224.0" layoutY="-60.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Imagenes/logo_market.png" />
+            <Image url="@../../../../../../../../MarketChiviado1/MarketChiviado/Market/src/main/resources/Images/logo_market.png" />
          </image>
       </ImageView>
       <Button fx:id="btnVolver" layoutX="278.0" layoutY="256.0" mnemonicParsing="false" onAction="#volver" prefHeight="26.0" prefWidth="72.0" style="-fx-background-color: Black; -fx-border-radius: 15; -fx-background-radius: 15; -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 5);" text="Volver" textFill="WHITE" />

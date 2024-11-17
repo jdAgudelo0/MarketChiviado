@@ -14,3 +14,65 @@ nov 13, 2024 11:04:12 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistro
 INFO: Ah Iniciado Sesion Inicio De Sesion 13/10/2024/11
 nov 13, 2024 11:06:06 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
 INFO: Ah Iniciado Sesion Inicio De Sesion 13/10/2024/11
+nov 17, 2024 3:22:06 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 17/10/2024/3
+nov 17, 2024 3:22:42 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: registro se esta agregando un vendedor 17/10/2024/3
+nov 17, 2024 3:25:07 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 17/10/2024/3
+nov 17, 2024 3:25:27 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: registro se agrega el admin 17/10/2024/3
+nov 17, 2024 3:52:31 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 17/10/2024/3
+nov 17, 2024 3:54:53 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: registro se esta agregando un producto 17/10/2024/3
+nov 17, 2024 3:59:55 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 17/10/2024/3
+nov 17, 2024 4:02:04 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 17/10/2024/4
+nov 17, 2024 4:03:01 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 17/10/2024/4
+nov 17, 2024 4:15:08 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 17/10/2024/4
+nov 17, 2024 4:18:55 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 17/10/2024/4
+nov 17, 2024 4:19:18 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: registro se esta agregando un vendedor 17/10/2024/4
+nov 17, 2024 4:20:24 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: registro se esta agregando un producto 17/10/2024/4
+nov 17, 2024 4:20:32 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+WARNING: actualizar se esta actualizando el producto 17/10/2024/4
+nov 17, 2024 4:20:38 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+WARNING: actualizar se esta actualizando el producto 17/10/2024/4
+nov 17, 2024 4:21:37 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 17/10/2024/4
+nov 17, 2024 4:22:13 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 17/10/2024/4
+nov 17, 2024 4:22:31 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: registro se esta agregando un vendedor 17/10/2024/4
+nov 17, 2024 4:24:03 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 17/10/2024/4
+nov 17, 2024 4:24:49 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 17/10/2024/4
+nov 17, 2024 4:25:13 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 17/10/2024/4
+nov 17, 2024 4:25:46 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 17/10/2024/4
+nov 17, 2024 4:26:08 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 17/10/2024/4
+nov 17, 2024 4:26:24 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 17/10/2024/4
+nov 17, 2024 4:34:34 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 17/10/2024/4
+nov 17, 2024 4:59:45 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 17/10/2024/4
+nov 17, 2024 5:00:08 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: registro se esta agregando un producto 17/10/2024/5
+nov 17, 2024 5:00:29 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 17/10/2024/5
+nov 17, 2024 5:20:55 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 17/10/2024/5
+nov 17, 2024 5:22:11 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 17/10/2024/5
+nov 17, 2024 5:22:38 P.M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: Ah Iniciado Sesion Inicio De Sesion 17/10/2024/5

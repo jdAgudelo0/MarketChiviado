@@ -8,10 +8,10 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto.market.View.ReporteViewController">
+<AnchorPane fx:id="btnVolver" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto.market.View.ReporteViewController">
 
     <!-- Logo -->
-    <ImageView fitHeight="40.0" fitWidth="120.0" layoutX="10.0" layoutY="10.0">
+    <ImageView fitHeight="58.0" fitWidth="311.0" layoutX="10.0">
         <Image url="@Imagenes/logo_market.png" />
     </ImageView>
 
@@ -19,9 +19,9 @@
     <VBox layoutX="20.0" layoutY="60.0" prefHeight="120.0" prefWidth="760.0" style="-fx-border-color: #d3d3d3; -fx-border-width: 1; -fx-background-color: #ffffff; -fx-padding: 10;">
         <HBox alignment="CENTER_LEFT" spacing="20">
             <ImageView fitHeight="40.0" fitWidth="40.0">
-                <Image url="@Imagenes/icono_usuario.png" />
+                <Image url="@Imagenes/usuario.png" />
             </ImageView>
-            <Label style="-fx-font-size: 14; -fx-font-weight: bold;" text="Nombre" />
+            <Label fx:id="lblNombre" style="-fx-font-size: 14; -fx-font-weight: bold;" text="Nombre" />
             <HBox spacing="5">
                 <Button style="-fx-font-size: 12;" text="-" />
                 <Label style="-fx-font-size: 14;" text="1" />
@@ -33,7 +33,7 @@
     </VBox>
 
     <!-- Botón Agregar Producto -->
-    <Button layoutX="20.0" layoutY="200.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #d3d3d3; -fx-font-size: 14; -fx-font-weight: bold;" text="Agregar producto" />
+    <Button fx:id="btnAgregarProducto" layoutX="20.0" layoutY="200.0" onAction="#agregar" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #d3d3d3; -fx-font-size: 14; -fx-font-weight: bold;" text="Agregar producto" />
 
     <!-- Resumen de compra -->
     <VBox layoutX="560.0" layoutY="350.0" prefHeight="120.0" prefWidth="200.0" style="-fx-border-color: #d3d3d3; -fx-border-width: 1; -fx-background-color: #ffffff; -fx-padding: 10;">
@@ -41,4 +41,5 @@
         <Label style="-fx-font-size: 14;" text="NombreProducto:  Precio:" />
         <Label style="-fx-font-size: 14; -fx-font-weight: bold;" text="Total:" />
     </VBox>
+   <Button fx:id="btnVolver" layoutX="10.0" layoutY="444.0" onAction="#volver" style="-fx-background-color: #ff6666; -fx-text-fill: white; -fx-font-size: 12;" text="Volver" />
 </AnchorPane>

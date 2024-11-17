@@ -18,7 +18,7 @@
             <Image url="@Imagenes/logo_market.png" />
          </image></ImageView>
         <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="MarketChiviado" />
-        <Button layoutX="650.0" layoutY="0.0" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #2D2D2D; -fx-text-fill: white;" text="Nuevo Mensaje" />
+        <Button fx:id="btnNuevoMensaje" layoutX="650.0" layoutY="0.0" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #2D2D2D; -fx-text-fill: white;" text="Nuevo Mensaje" />
     </HBox>
 
     <!-- Mensajes -->
@@ -27,13 +27,14 @@
         <HBox spacing="10">
             <ImageView fx:id="userImageView" fitHeight="50.0" fitWidth="50.0" />
             <VBox spacing="5">
-                <Label style="-fx-font-weight: bold;" text="Nombre" />
-                <Label style="-fx-text-fill: #9b9b9b;" text="Nombre de Usuario" />
+                <Label fx:id="lblNombre" style="-fx-font-weight: bold;" text="Nombre" />
+                <Label fx:id="lblNombreUsuario" style="-fx-text-fill: #9b9b9b;" text="Nombre de Usuario" />
                 <TextArea fx:id="messageTextArea" editable="false" prefHeight="50.0" prefWidth="600.0" />
             </VBox>
         </HBox>
 
         <!-- Repite HBox para más mensajes -->
     </VBox>
+   <Button fx:id="btnVolver" layoutX="672.0" layoutY="549.0" onAction="#volver" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #2D2D2D; -fx-text-fill: white;" text="Volver" />
 
 </AnchorPane>

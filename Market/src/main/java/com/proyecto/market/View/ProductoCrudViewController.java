@@ -12,6 +12,10 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
@@ -55,6 +59,9 @@ public class ProductoCrudViewController {
 
     @FXML
     private TextField txtPrecio;
+
+    @FXML
+    private Button btnVolver;
 
     ProductoController productoController;
 
@@ -153,15 +160,25 @@ public class ProductoCrudViewController {
             }}}
 
 
-    public Producto crearProducto(){
+    public Producto crearProducto() {
         Producto producto = new Producto();
+
         producto.setCodigo(UUID.randomUUID().toString());
         producto.setNombreProducto(txtNombre.getText());
-        producto.setPrecio(Float.parseFloat(txtPrecio.getText()));
+
+        // Permitir cualquier entrada y manejar el precio como texto
+        String precioTexto = txtPrecio.getText();
+        try {
+            producto.setPrecio(Float.parseFloat(precioTexto));
+        } catch (NumberFormatException e) {
+            producto.setPrecio(0.0f); // Asignar un valor predeterminado
+        }
+
         producto.setCategoria(cbxCategoria.getSelectionModel().getSelectedItem());
         producto.setVendedor(productoController.getVendedor());
         producto.setEstado(Estado.PUBLICADO);
         producto.setLikes(0);
+
         return producto;
     }
 
@@ -282,6 +299,26 @@ public class ProductoCrudViewController {
         alert.setHeaderText(header);
         alert.setContentText(contenido);
         alert.showAndWait();
+    }
+
+    @FXML
+    public void volver(ActionEvent actionEvent){
+        //Cierra la ventana actual
+        Stage currentStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        currentStage.close();
+
+        //Intenta abrir el inicio sesion
+        try{
+            FXMLLoader loader= new FXMLLoader(getClass().getResource("/com/proyecto/market/muro.fxml"));
+            Parent root = loader.load();
+            Stage stage= new Stage();
+            stage.setTitle("Inicio sesion");
+            stage.setScene(new Scene(root));
+            stage.show();
+        }catch (IOException e){
+            e.printStackTrace();
+
+        }
     }
 
 }

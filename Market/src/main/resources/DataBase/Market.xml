@@ -1,4 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <java version="22.0.2" class="java.beans.XMLDecoder">
- <object class="com.proyecto.market.Model.Market"/>
+ <object class="com.proyecto.market.Model.Market" id="Market0">
+  <void property="administradores">
+   <void method="add">
+    <object class="com.proyecto.market.Model.Administrador">
+     <void property="apellido">
+      <string>Bermudez</string>
+     </void>
+     <void property="cedula">
+      <string>21312312</string>
+     </void>
+     <void property="nombre">
+      <string>Juan</string>
+     </void>
+     <void property="password">
+      <string>12345</string>
+     </void>
+     <void property="rutaImagen">
+      <string>src/main/resources/Images/Admins/PerfilErroError.png</string>
+     </void>
+     <void property="usuario">
+      <string>Juanito</string>
+     </void>
+    </object>
+   </void>
+  </void>
+  <void property="productos">
+   <void method="add">
+    <object class="com.proyecto.market.Model.Producto" id="Producto0">
+     <void property="categoria">
+      <object class="java.lang.Enum" method="valueOf">
+       <class>com.proyecto.market.Model.Enum.Categoria</class>
+       <string>DEPORTE</string>
+      </object>
+     </void>
+     <void property="codigo">
+      <string>35b35dee-3244-4621-983b-cad1f935e0d0</string>
+     </void>
+     <void property="estado">
+      <object class="java.lang.Enum" method="valueOf">
+       <class>com.proyecto.market.Model.Enum.Estado</class>
+       <string>PUBLICADO</string>
+      </object>
+     </void>
+     <void property="imagen">
+      <string>null</string>
+     </void>
+     <void property="nombreProducto">
+      <string>Hot-dog</string>
+     </void>
+     <void property="precio">
+      <float>2.0</float>
+     </void>
+     <void property="vendedor">
+      <object class="com.proyecto.market.Model.Vendedor">
+       <void property="cedula">
+        <string>3212312</string>
+       </void>
+      </object>
+     </void>
+    </object>
+   </void>
+  </void>
+  <void property="vendedores">
+   <void method="add">
+    <object class="com.proyecto.market.Model.Vendedor">
+     <void property="apellido">
+      <string>Bermudez</string>
+     </void>
+     <void property="cedula">
+      <string>12412412</string>
+     </void>
+     <void property="contrasenia">
+      <string>1234</string>
+     </void>
+     <void property="nombre">
+      <string>Elkin</string>
+     </void>
+     <void property="usuario">
+      <string>Elkinlol</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="com.proyecto.market.Model.Vendedor" id="Vendedor0">
+     <void property="apellido">
+      <string>Bermudez Grajales</string>
+     </void>
+     <void property="cedula">
+      <string>3212312</string>
+     </void>
+     <void property="contrasenia">
+      <string>123</string>
+     </void>
+     <void property="nombre">
+      <string>Elkin</string>
+     </void>
+     <void property="productos">
+      <void method="add">
+       <object idref="Producto0"/>
+      </void>
+     </void>
+     <void property="usuario">
+      <string>agu33</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="com.proyecto.market.Model.Vendedor">
+     <void property="apellido">
+      <string>bERQ23</string>
+     </void>
+     <void property="cedula">
+      <string>123123</string>
+     </void>
+     <void property="contrasenia">
+      <string>12</string>
+     </void>
+     <void property="nombre">
+      <string>Juan</string>
+     </void>
+     <void property="usuario">
+      <string>Ju</string>
+     </void>
+    </object>
+   </void>
+  </void>
+ </object>
 </java>
