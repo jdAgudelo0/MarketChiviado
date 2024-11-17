@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="23.0.1" class="java.beans.XMLDecoder">
+<java version="23" class="java.beans.XMLDecoder">
  <object class="com.proyecto.market.Model.Market" id="Market0">
   <void property="administradores">
    <void method="add">
@@ -51,7 +51,7 @@
    <void method="add">
     <object class="com.proyecto.market.Model.Producto" id="Producto0">
      <void property="categoria">
-      <object class="java.lang.Enum" method="valueOf">
+      <object class="java.lang.Enum" id="Categoria0" method="valueOf">
        <class>com.proyecto.market.Model.Enum.Categoria</class>
        <string>HOGAR</string>
       </object>
@@ -60,7 +60,7 @@
       <string>30ca2cea-0273-427e-b814-47bc4806993e</string>
      </void>
      <void property="estado">
-      <object class="java.lang.Enum" method="valueOf">
+      <object class="java.lang.Enum" id="Estado0" method="valueOf">
        <class>com.proyecto.market.Model.Enum.Estado</class>
        <string>PUBLICADO</string>
       </object>
@@ -73,6 +73,99 @@
      </void>
      <void property="precio">
       <float>12.0</float>
+     </void>
+     <void property="vendedor">
+      <object class="com.proyecto.market.Model.Vendedor">
+       <void property="cedula">
+        <string>3</string>
+       </void>
+      </object>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="com.proyecto.market.Model.Producto" id="Producto1">
+     <void property="categoria">
+      <object idref="Categoria0"/>
+     </void>
+     <void property="codigo">
+      <string>bb3e434f-59ca-494a-9749-782d9025134e</string>
+     </void>
+     <void property="estado">
+      <object idref="Estado0"/>
+     </void>
+     <void property="imagen">
+      <string>src\main\resources\Images\Product\bb3e434f-59ca-494a-9749-782d9025134e.jpg</string>
+     </void>
+     <void property="nombreProducto">
+      <string>jabon</string>
+     </void>
+     <void property="precio">
+      <float>12000.0</float>
+     </void>
+     <void property="vendedor">
+      <object class="com.proyecto.market.Model.Vendedor">
+       <void property="cedula">
+        <string>3</string>
+       </void>
+      </object>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="com.proyecto.market.Model.Producto" id="Producto2">
+     <void property="categoria">
+      <object class="java.lang.Enum" method="valueOf">
+       <class>com.proyecto.market.Model.Enum.Categoria</class>
+       <string>MODA</string>
+      </object>
+     </void>
+     <void property="codigo">
+      <string>300de28b-5e3a-4bef-be35-391a2caa2184</string>
+     </void>
+     <void property="estado">
+      <object idref="Estado0"/>
+     </void>
+     <void property="imagen">
+      <string>src\main\resources\Images\Product\300de28b-5e3a-4bef-be35-391a2caa2184.jpg</string>
+     </void>
+     <void property="nombreProducto">
+      <string>Zapato</string>
+     </void>
+     <void property="precio">
+      <float>60000.0</float>
+     </void>
+     <void property="vendedor">
+      <object class="com.proyecto.market.Model.Vendedor">
+       <void property="cedula">
+        <string>3</string>
+       </void>
+      </object>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="com.proyecto.market.Model.Producto" id="Producto3">
+     <void property="categoria">
+      <object class="java.lang.Enum" method="valueOf">
+       <class>com.proyecto.market.Model.Enum.Categoria</class>
+       <string>ELECTRONICO</string>
+      </object>
+     </void>
+     <void property="codigo">
+      <string>b1dc194a-2987-4f28-886f-6b9752080ab9</string>
+     </void>
+     <void property="estado">
+      <object idref="Estado0"/>
+     </void>
+     <void property="imagen">
+      <string>src\main\resources\Images\Product\b1dc194a-2987-4f28-886f-6b9752080ab9.png</string>
+     </void>
+     <void property="nombreProducto">
+      <string>caca</string>
+     </void>
+     <void property="precio">
+      <float>1000000.0</float>
      </void>
      <void property="vendedor">
       <object class="com.proyecto.market.Model.Vendedor">
@@ -102,6 +195,15 @@
      <void property="productos">
       <void method="add">
        <object idref="Producto0"/>
+      </void>
+      <void method="add">
+       <object idref="Producto1"/>
+      </void>
+      <void method="add">
+       <object idref="Producto2"/>
+      </void>
+      <void method="add">
+       <object idref="Producto3"/>
       </void>
      </void>
      <void property="usuario">

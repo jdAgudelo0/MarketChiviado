@@ -1,1 +1,4 @@
 30ca2cea-0273-427e-b814-47bc4806993e %% 3 %% gwen %% 12.0 %% HOGAR %% src\main\resources\Images\Product\30ca2cea-0273-427e-b814-47bc4806993e.png %% PUBLICADO %% 0 %% 
+bb3e434f-59ca-494a-9749-782d9025134e %% 3 %% jabon %% 12000.0 %% HOGAR %% src\main\resources\Images\Product\bb3e434f-59ca-494a-9749-782d9025134e.jpg %% PUBLICADO %% 0 %% 
+300de28b-5e3a-4bef-be35-391a2caa2184 %% 3 %% Zapato %% 60000.0 %% MODA %% src\main\resources\Images\Product\300de28b-5e3a-4bef-be35-391a2caa2184.jpg %% PUBLICADO %% 0 %% 
+b1dc194a-2987-4f28-886f-6b9752080ab9 %% 3 %% caca %% 1000000.0 %% ELECTRONICO %% src\main\resources\Images\Product\b1dc194a-2987-4f28-886f-6b9752080ab9.png %% PUBLICADO %% 0 %% 

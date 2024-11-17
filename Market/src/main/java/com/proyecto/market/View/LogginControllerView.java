@@ -40,7 +40,7 @@ public class LogginControllerView {
 
             switch (opciones){
 
-                case 1: cambiarVentana("ProductoCrud.fxml",event);
+                case 1: cambiarVentana("Producto.fxml",event);
                     break;
 
                 case 2: cambiarVentana("AdminCrud.View.fxml",event);

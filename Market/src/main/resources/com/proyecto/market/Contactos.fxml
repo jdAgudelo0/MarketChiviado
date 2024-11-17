@@ -7,7 +7,6 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="606.0" prefWidth="782.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto.market.Contactos">
    <children>
       <ImageView fitHeight="73.0" fitWidth="167.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
@@ -22,52 +21,7 @@
             <Font name="System Bold Italic" size="19.0" />
          </font>
       </Label>
-      <Label layoutX="40.0" layoutY="538.0" prefHeight="26.0" prefWidth="315.0" style="-fx-border-color: black; -fx-border-radius: 3;" text="  Aliado 10">
-         <font>
-            <Font name="System Bold Italic" size="13.0" />
-         </font>
-      </Label>
-      <Label layoutX="40.0" layoutY="494.0" prefHeight="26.0" prefWidth="315.0" style="-fx-border-color: black; -fx-border-radius: 3;" text="  Aliado 9">
-         <font>
-            <Font name="System Bold Italic" size="13.0" />
-         </font>
-      </Label>
-      <Label layoutX="40.0" layoutY="451.0" prefHeight="26.0" prefWidth="315.0" style="-fx-border-color: black; -fx-border-radius: 3;" text="  Aliado 8">
-         <font>
-            <Font name="System Bold Italic" size="13.0" />
-         </font>
-      </Label>
-      <Label layoutX="40.0" layoutY="407.0" prefHeight="26.0" prefWidth="315.0" style="-fx-border-color: black; -fx-border-radius: 3;" text="  Aliado 7">
-         <font>
-            <Font name="System Bold Italic" size="13.0" />
-         </font>
-      </Label>
-      <Label layoutX="40.0" layoutY="364.0" prefHeight="26.0" prefWidth="315.0" style="-fx-border-color: black; -fx-border-radius: 3;" text="  Aliado 6">
-         <font>
-            <Font name="System Bold Italic" size="13.0" />
-         </font>
-      </Label>
-      <Label layoutX="40.0" layoutY="324.0" prefHeight="26.0" prefWidth="315.0" style="-fx-border-color: black; -fx-border-radius: 3;" text="  Aliado 5">
-         <font>
-            <Font name="System Bold Italic" size="13.0" />
-         </font>
-      </Label>
-      <Label layoutX="40.0" layoutY="282.0" prefHeight="26.0" prefWidth="315.0" style="-fx-border-color: black; -fx-border-radius: 3;" text="  Aliado 4">
-         <font>
-            <Font name="System Bold Italic" size="13.0" />
-         </font>
-      </Label>
-      <Label layoutX="40.0" layoutY="242.0" prefHeight="26.0" prefWidth="315.0" style="-fx-border-color: black; -fx-border-radius: 3;" text="  Aliado 3">
-         <font>
-            <Font name="System Bold Italic" size="13.0" />
-         </font>
-      </Label>
-      <Label layoutX="40.0" layoutY="199.0" prefHeight="26.0" prefWidth="315.0" style="-fx-border-color: black; -fx-border-radius: 3;" text="  Aliado 2">
-         <font>
-            <Font name="System Bold Italic" size="13.0" />
-         </font>
-      </Label>
-      <Label layoutX="40.0" layoutY="160.0" prefHeight="26.0" prefWidth="315.0" style="-fx-border-color: black; -fx-border-radius: 3;" text="  Aliado 1">
+      <Label fx:id="aliados" alignment="TOP_CENTER" layoutX="40.0" layoutY="160.0" prefHeight="416.0" prefWidth="315.0" style="-fx-border-color: black; -fx-border-radius: 3;" text="Sin Aliados :(">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>

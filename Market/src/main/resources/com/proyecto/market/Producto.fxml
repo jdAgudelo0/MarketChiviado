@@ -7,37 +7,28 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="566.0" prefWidth="758.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto.market.Producto">
+<AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="566.0" prefWidth="758.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto.market.Controller.ProductoTrueController">
    <children>
-      <ImageView fitHeight="98.0" fitWidth="178.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="logoChiviado" fitHeight="92.0" fitWidth="181.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../../Downloads/wImage@1x%20(2).png" />
+            <Image url="@../../../../../../../../../../Downloads/logoMarket.png" />
          </image>
       </ImageView>
-      <TextField layoutX="264.0" layoutY="50.0" prefHeight="22.0" prefWidth="206.0" style="-fx-border-color: black; -fx-border-radius: 11; -fx-background-color: white;" text="Nombre del producto">
+      <TextField fx:id="txtNombre" layoutX="269.0" layoutY="82.0" prefHeight="22.0" prefWidth="206.0" promptText="Nombre del producto" style="-fx-border-color: black; -fx-border-radius: 11; -fx-background-color: white;">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </TextField>
-      <TextField layoutX="264.0" layoutY="92.0" prefHeight="18.0" prefWidth="206.0" style="-fx-border-color: black; -fx-border-radius: 11; -fx-background-color: white;" text="Codigo">
+      <TextField fx:id="txtPrecio" layoutX="269.0" layoutY="124.0" prefHeight="21.0" prefWidth="206.0" promptText="Precio" style="-fx-border-color: black; -fx-border-radius: 11; -fx-background-color: white;">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </TextField>
-      <TextField layoutX="264.0" layoutY="377.0" prefHeight="20.0" prefWidth="199.0" style="-fx-border-color: black; -fx-border-radius: 11; -fx-background-color: white;" text="Precio">
-         <font>
-            <Font name="System Bold Italic" size="12.0" />
-         </font>
-      </TextField>
-      <ImageView fitHeight="134.0" fitWidth="256.0" layoutX="234.0" layoutY="137.0" pickOnBounds="true" style="-fx-preserve-ratio: 11;">
-         <image>
-            <Image url="@../../../../../../../../../../Downloads/6e2a8b9ae5351fc94f7c360c73ad8031.jpg" />
-         </image>
-      </ImageView>
-      <Button layoutX="264.0" layoutY="280.0" mnemonicParsing="false" onAction="#seleccionarImagen" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 11;" text="Seleccionar Imagen" textAlignment="CENTER" wrapText="true">
+      <ImageView fx:id="productoImagen" fitHeight="124.0" fitWidth="228.0" layoutX="258.0" layoutY="188.0" pickOnBounds="true" style="-fx-preserve-ratio: 11;" />
+      <Button layoutX="268.0" layoutY="328.0" mnemonicParsing="false" onAction="#seleccionarImagen" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 11; -fx-background-radius: 20;" text="Seleccionar Imagen" textAlignment="CENTER" textFill="WHITE" wrapText="true">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
@@ -45,13 +36,8 @@
             <Blend />
          </effect>
       </Button>
-      <ComboBox layoutX="261.0" layoutY="429.0" prefHeight="27.0" prefWidth="199.0" promptText="Estado" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 11;" />
-      <TextField layoutX="264.0" layoutY="330.0" prefHeight="20.0" prefWidth="199.0" style="-fx-border-color: black; -fx-border-radius: 11; -fx-background-color: white;" text="Categoria">
-         <font>
-            <Font name="System Bold Italic" size="12.0" />
-         </font>
-      </TextField>
-      <Button layoutX="283.0" layoutY="485.0" mnemonicParsing="false" onAction="#seleccionarImagen" prefHeight="27.0" prefWidth="168.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 11;" text="Crear Producto" textAlignment="CENTER" wrapText="true">
+      <ComboBox fx:id="combCategoria" layoutX="268.0" layoutY="385.0" prefHeight="27.0" prefWidth="199.0" promptText="Categoria" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 11;" />
+      <Button layoutX="283.0" layoutY="485.0" mnemonicParsing="false" onAction="#crearProducto" prefHeight="27.0" prefWidth="168.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 11; -fx-background-radius: 20;" text="Crear Producto" textAlignment="CENTER" textFill="WHITE" wrapText="true">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
@@ -59,5 +45,6 @@
             <Blend />
          </effect>
       </Button>
+      <Pane focusTraversable="true" layoutX="255.0" layoutY="183.0" prefHeight="133.0" prefWidth="234.0" style="-fx-border-color: black; -fx-border-radius: 5;" />
    </children>
 </AnchorPane>
