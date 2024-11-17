@@ -8,16 +8,16 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="452.0" prefWidth="698.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto.market.View.SugerirAmistadesController">
+<AnchorPane prefHeight="505.0" prefWidth="764.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto.market.View.SugerirAmistadesController">
 
     <!-- Logo y título -->
     <HBox layoutX="20.0" layoutY="20.0" spacing="10" />
 
     <!-- Título de la sección -->
-    <Label layoutX="20.0" layoutY="90.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Sugerencias" />
+    <Label layoutX="46.0" layoutY="157.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Sugerencias" />
 
     <!-- Contenedor de sugerencias -->
-    <VBox layoutX="20.0" layoutY="140.0" prefHeight="191.0" prefWidth="642.0" spacing="10">
+    <VBox layoutY="220.0" prefHeight="191.0" prefWidth="642.0" spacing="10">
         <!-- Personas sugeridas -->
         <HBox spacing="10">
             <ImageView fx:id="personImageView1" fitHeight="40.0" fitWidth="40.0" />
@@ -43,10 +43,11 @@
             <Button style="-fx-background-color: #89CFF0; -fx-text-fill: black;" text="Enviar Solicitud" />
         </HBox>
     </VBox>
-     <ImageView fx:id="logoImageView" fitHeight="102.0" fitWidth="281.0" layoutY="-12.0">
+     <ImageView fx:id="logoImageView" fitHeight="162.0" fitWidth="256.0" layoutY="-17.0">
       <image>
          <Image url="@Imagenes/logo_market.png" />
       </image>
    </ImageView>
+   <Button fx:id="btnVolver" layoutX="62.0" layoutY="441.0" mnemonicParsing="false" onAction="#volver" prefHeight="26.0" prefWidth="62.0" style="-fx-background-color: black;" text="Volver" textFill="WHITE" />
 
 </AnchorPane>
