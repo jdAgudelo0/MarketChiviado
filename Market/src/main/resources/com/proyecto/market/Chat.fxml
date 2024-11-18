@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="747.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto.market.Controller.ChatController">
+   <children>
+      <VBox layoutX="27.0" layoutY="119.0" prefHeight="543.0" prefWidth="701.0">
+         <children>
+            <TextArea fx:id="chatArea" editable="false" prefHeight="396.0" prefWidth="701.0" />
+            <TextField fx:id="mensaje" alignment="TOP_LEFT" prefHeight="113.0" prefWidth="701.0" />
+            <Button mnemonicParsing="false" onAction="#enviarMensaje" prefHeight="35.0" prefWidth="178.0" style="-fx-translate-x: 515; -fx-background-color: black; -fx-text-fill: white; -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 2); -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 20; -fx-padding: 12 30 12 30;" text="Enviar Mensaje" />
+         </children></VBox>
+      <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="298.0" layoutY="27.0" prefHeight="27.0" prefWidth="126.0" text="Chat">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="logoChiviado" fitHeight="108.0" fitWidth="214.0" layoutY="-2.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../../../../../../Downloads/logoMarket.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -48,13 +48,36 @@ public class ChatViewController {
             FXMLLoader loader= new FXMLLoader(getClass().getResource("/com/proyecto/market/muro.fxml"));
             Parent root = loader.load();
             Stage stage= new Stage();
-            stage.setTitle("Inicio sesion");
+            stage.setTitle("Muro");
             stage.setScene(new Scene(root));
             stage.show();
         }catch (IOException e){
             e.printStackTrace();
 
         }
+    }
+
+    @FXML
+    public void nuevoMensaje (ActionEvent event){
+
+
+
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        currentStage.close();
+
+        //Intenta abrir el inicio sesion
+        try{
+            FXMLLoader loader= new FXMLLoader(getClass().getResource("/com/proyecto/market/Chat.fxml"));
+            Parent root = loader.load();
+            Stage stage= new Stage();
+            stage.setTitle("Chat");
+            stage.setScene(new Scene(root));
+            stage.show();
+        }catch (IOException e){
+            e.printStackTrace();
+
+        }
+
     }
 
 }
