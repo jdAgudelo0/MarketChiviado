@@ -24,7 +24,7 @@ public class ChatController {
     private TextField mensajeField;
 
     private String recipiente;
-    private String userName = "MiVendedor";
+    private String userActual;
     private ObjectOutputStream out;
 
     public void setRecipiente(String recipiente){
@@ -32,7 +32,11 @@ public class ChatController {
     }
 
     @FXML
-    public void initialize(){
+    public void initialize(String userActual, String recipiente){
+        this.userActual = userActual;
+        this.recipiente = recipiente;
+        logoChiviado.getImage();
+
         try {
             Socket socket = new Socket("localHost",12345);
             out = new ObjectOutputStream(socket.getOutputStream());
@@ -61,7 +65,10 @@ public class ChatController {
         if(!mensaje.isEmpty()){
             try{
                 out.writeObject(recipiente);
-                out.writeObject(userName + ": " + mensaje + "\n");
+                out.writeObject(userActual+ ": " + mensaje + "\n");
+                out.flush();
+
+                chatArea.appendText("Tu: " + mensaje + "\n");
                 mensajeField.clear();
 
             } catch (IOException e){

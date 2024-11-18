@@ -55,6 +55,12 @@ public class InicioViewController {
 
     private LogginController controller;
 
+    private static String currentUser;
+
+    public static String getCurrentUser() {
+        return currentUser;
+    }
+
     @FXML
     public void initialize() {
         controller = new LogginController();
@@ -88,6 +94,7 @@ public class InicioViewController {
         if (verificarCampo()){
 
             int opciones = controller.loggin(txtUsuario.getText(),pfContrasenia.getText());
+            currentUser = txtUsuario.getText();
 
             switch (opciones){
 
