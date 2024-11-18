@@ -96,6 +96,27 @@ public class InicioViewController {
             int opciones = controller.loggin(txtUsuario.getText(),pfContrasenia.getText());
             currentUser = txtUsuario.getText();
 
+      try (Socket socket = new Socket("localhost", 12345);
+             ObjectOutputStream out = new ObjectOutputStream(socket.getOutputStream());
+             ObjectInputStream in = new ObjectInputStream(socket.getInputStream())) {
+
+            out.writeObject("AUTH");
+            out.writeObject(username);
+            out.writeObject(password);
+            String response = (String) in.readObject();
+
+            if (response.equals("SUCCESS")) {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION, "Login exitoso");
+                alert.show();
+            } else {
+                Alert alert = new Alert(Alert.AlertType.ERROR, "Login fallido");
+                alert.show();
+            }
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
             switch (opciones){
 
                 case 1: cambiarVentana("muro.fxml",event);
