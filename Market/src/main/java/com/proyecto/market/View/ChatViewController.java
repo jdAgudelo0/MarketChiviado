@@ -25,14 +25,18 @@ public class ChatViewController {
     private ImageView logoImageView;
 
     @FXML
-    private ListView<Vendedor> listaAliados;
+    private ListView<String> listaAliados;
 
     private Vendedor user;
 
+    public ChatViewController(Vendedor user) {
+        this.user = user;
+    }
+
     @FXML
     public void initialize (){
-        listaAliados.getItems().addAll(user.getCedulasAliados());
         logoImageView.getImage();
+
     }
 
     @FXML

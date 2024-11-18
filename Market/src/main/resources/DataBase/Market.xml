@@ -25,43 +25,6 @@
     </object>
    </void>
   </void>
-  <void property="productos">
-   <void method="add">
-    <object class="com.proyecto.market.Model.Producto" id="Producto0">
-     <void property="categoria">
-      <object class="java.lang.Enum" method="valueOf">
-       <class>com.proyecto.market.Model.Enum.Categoria</class>
-       <string>DEPORTE</string>
-      </object>
-     </void>
-     <void property="codigo">
-      <string>35b35dee-3244-4621-983b-cad1f935e0d0</string>
-     </void>
-     <void property="estado">
-      <object class="java.lang.Enum" method="valueOf">
-       <class>com.proyecto.market.Model.Enum.Estado</class>
-       <string>PUBLICADO</string>
-      </object>
-     </void>
-     <void property="imagen">
-      <string>null</string>
-     </void>
-     <void property="nombreProducto">
-      <string>Hot-dog</string>
-     </void>
-     <void property="precio">
-      <float>2.0</float>
-     </void>
-     <void property="vendedor">
-      <object class="com.proyecto.market.Model.Vendedor">
-       <void property="cedula">
-        <string>3212312</string>
-       </void>
-      </object>
-     </void>
-    </object>
-   </void>
-  </void>
   <void property="vendedores">
    <void method="add">
     <object class="com.proyecto.market.Model.Vendedor">
@@ -83,7 +46,7 @@
     </object>
    </void>
    <void method="add">
-    <object class="com.proyecto.market.Model.Vendedor" id="Vendedor0">
+    <object class="com.proyecto.market.Model.Vendedor">
      <void property="apellido">
       <string>Bermudez Grajales</string>
      </void>
@@ -95,11 +58,6 @@
      </void>
      <void property="nombre">
       <string>Elkin</string>
-     </void>
-     <void property="productos">
-      <void method="add">
-       <object idref="Producto0"/>
-      </void>
      </void>
      <void property="usuario">
       <string>agu33</string>
@@ -122,6 +80,25 @@
      </void>
      <void property="usuario">
       <string>Ju</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="com.proyecto.market.Model.Vendedor">
+     <void property="apellido">
+      <string>SSSS</string>
+     </void>
+     <void property="cedula">
+      <string>11111</string>
+     </void>
+     <void property="contrasenia">
+      <string>s</string>
+     </void>
+     <void property="nombre">
+      <string>S</string>
+     </void>
+     <void property="usuario">
+      <string>s</string>
      </void>
     </object>
    </void>

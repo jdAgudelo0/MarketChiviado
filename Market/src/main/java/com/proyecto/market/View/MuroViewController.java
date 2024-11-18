@@ -102,19 +102,6 @@ public class MuroViewController {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     public void cambiarVentana(String nombreFxml,ActionEvent event) throws IOException {
 
         FXMLLoader loader = new FXMLLoader();

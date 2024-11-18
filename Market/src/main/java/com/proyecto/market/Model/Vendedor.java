@@ -78,9 +78,20 @@ public class Vendedor implements AdministrarMensajes, Serializable {
         this.cedula = cedula;
     }
 
-    public ArrayList<Vendedor> getCedulasAliados() {
+    public ArrayList<String> getCedulasAliados() {
+        ArrayList<String> cedulas = new ArrayList<>();
+
+        for( Vendedor a: cedulasAliados){
+            String c = a.getCedula();
+            cedulas.add(c);
+        }
+        return cedulas;
+    }
+
+    public ArrayList<Vendedor> getAliados(){
         return cedulasAliados;
     }
+
 
     public void setCedulasAliados(ArrayList<Vendedor> cedulasAliados) {
         this.cedulasAliados = cedulasAliados;

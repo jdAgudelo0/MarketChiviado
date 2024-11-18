@@ -1,7 +1,6 @@
 package com.proyecto.market.View;
 
 import com.proyecto.market.Controller.LogginController;
-import com.proyecto.market.Model.Market;
 import com.proyecto.market.main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,6 +16,9 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.net.Socket;
 
 public class InicioViewController {
 
@@ -94,32 +96,31 @@ public class InicioViewController {
         if (verificarCampo()){
 
             int opciones = controller.loggin(txtUsuario.getText(),pfContrasenia.getText());
+            txtUsuario.getScene().getWindow().hide();
             currentUser = txtUsuario.getText();
-
-      try (Socket socket = new Socket("localhost", 12345);
-             ObjectOutputStream out = new ObjectOutputStream(socket.getOutputStream());
-             ObjectInputStream in = new ObjectInputStream(socket.getInputStream())) {
-
-            out.writeObject("AUTH");
-            out.writeObject(username);
-            out.writeObject(password);
-            String response = (String) in.readObject();
-
-            if (response.equals("SUCCESS")) {
-                Alert alert = new Alert(Alert.AlertType.INFORMATION, "Login exitoso");
-                alert.show();
-            } else {
-                Alert alert = new Alert(Alert.AlertType.ERROR, "Login fallido");
-                alert.show();
-            }
-        } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
-
             switch (opciones){
 
-                case 1: cambiarVentana("muro.fxml",event);
+                case 1:
+
+                try (Socket socket = new Socket("localhost", 12345);
+                                                                ObjectOutputStream out = new ObjectOutputStream(socket.getOutputStream());
+                                                                ObjectInputStream in = new ObjectInputStream(socket.getInputStream())) {
+
+                    out.writeObject("AUTH");
+                    out.writeObject(txtUsuario.getText());
+                    out.writeObject(pfContrasenia.getText());
+                    String response = (String) in.readObject();
+
+                    if (response.equals("SUCCESS")) {
+                       System.out.println("Autenticacion Exitosa");
+                    } else {
+                        System.out.println("Autenticacion Fallida");
+                    }
+                } catch (IOException | ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+
+                cambiarVentana("muro.fxml",event);
                     break;
 
                 case 2: cambiarVentana("AdminCrud.View.fxml",event);
@@ -128,7 +129,15 @@ public class InicioViewController {
                 case 0: mostrarMensaje("Error Al Iniciar Sesion","Error con los datos","El Usuario"+
                         "o Contraseña no han sido registrados", Alert.AlertType.ERROR);
                     break;
-            }}}
+            }
+
+
+
+
+    }
+
+
+    }
 
     private void mostrarMensaje(String titulo, String header, String contenido, Alert.AlertType alertType) {
         Alert aler = new Alert(alertType);
@@ -170,6 +179,7 @@ public class InicioViewController {
         stage.setScene(scene);
         stage.showAndWait();
     }
-
 }
+
+
 

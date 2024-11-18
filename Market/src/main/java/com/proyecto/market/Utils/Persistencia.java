@@ -47,7 +47,8 @@ public class Persistencia {
                 contenido.append("null %% ");
             }
 
-            ArrayList<Vendedor> vendedores = vendedor.getCedulasAliados();
+            ArrayList<Vendedor> vendedores = vendedor.getAliados();
+
             if (vendedores != null) {
                 for (Vendedor vendedor1 : vendedores) {
                     contenido.append(vendedor1.getCedula()).append(" %% ");
