@@ -56,8 +56,11 @@ public class ChatController {
 
     private  void listenForMensajes (Socket socket){
         try (ObjectInputStream input = new ObjectInputStream(socket.getInputStream())){
-
-        } catch (IOException e) {
+          while(true){
+              String mensaje = (String) input.readObject();
+              chatArea.appendText(mensaje + "\n");
+          }
+        } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
