@@ -42,7 +42,7 @@ public class ModelFactory {
         System.out.printf("te invoco");
 
         cargarDatos();
-        guardarLog("Inicio De Sesion",1,"Ah Iniciado Sesion");
+        guardarLog("Inicio De Sesion: " ,1,", " + "ha Iniciado Sesion");
         guardarBinario();
         guardarArchivoXml();
         iniciarActualizacionDatos();

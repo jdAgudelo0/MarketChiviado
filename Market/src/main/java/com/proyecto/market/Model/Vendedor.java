@@ -3,7 +3,6 @@ package com.proyecto.market.Model;
 import com.proyecto.market.Exceptions.VendedorException;
 import com.proyecto.market.Model.Interface.AdministrarMensajes;
 
-
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -20,6 +19,7 @@ public class Vendedor implements AdministrarMensajes, Serializable {
     private ArrayList<Vendedor> cedulasAliados = new ArrayList();
     private Muro muro;
     private ArrayList<Producto> productos = new ArrayList<>();
+    private ArrayList<Vendedor> solicitudesRecibidas = new ArrayList<>();
 
     private static final int CANTIDAD_MAXIMA_VENDEDORES_ALIADOS= 10;
 
@@ -33,6 +33,7 @@ public class Vendedor implements AdministrarMensajes, Serializable {
         this.cedulasAliados = cedulasAliados;
         this.muro = muro;
         this.productos = productos;
+        this.solicitudesRecibidas = solicitudesRecibidas;
     }
 
     public Vendedor() {}
@@ -88,6 +89,13 @@ public class Vendedor implements AdministrarMensajes, Serializable {
         return cedulas;
     }
 
+    public void agregarAliado(Vendedor aliado) {
+        if (!cedulasAliados.contains(aliado) && !aliado.equals(this)) {
+            cedulasAliados.add(aliado);
+            aliado.cedulasAliados.add(this); // Relación bidireccional
+        }
+    }
+
     public ArrayList<Vendedor> getAliados(){
         return cedulasAliados;
     }
@@ -95,6 +103,23 @@ public class Vendedor implements AdministrarMensajes, Serializable {
 
     public void setCedulasAliados(ArrayList<Vendedor> cedulasAliados) {
         this.cedulasAliados = cedulasAliados;
+    }
+
+    public ArrayList<Vendedor> getSolicitudesRecibidas() {
+        return solicitudesRecibidas;
+    }
+
+    public void recibirSolicitud(Vendedor vendedor) {
+
+        if (!solicitudesRecibidas.contains(vendedor) && !cedulasAliados.contains(vendedor)) {
+            solicitudesRecibidas.add(vendedor);
+        }
+    }
+
+    public void aceptarSolicitud(Vendedor vendedor) {
+        if (solicitudesRecibidas.remove(vendedor)) {
+            agregarAliado(vendedor);
+        }
     }
 
     public Muro getMuro() {

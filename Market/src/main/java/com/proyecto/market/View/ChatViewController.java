@@ -35,7 +35,7 @@ public class ChatViewController {
 
     @FXML
     public void initialize (){
-        logoImageView.getImage();
+        listaAliados.getItems().addAll("1234", "33222", "TEFA");
 
     }
 
@@ -83,6 +83,7 @@ public class ChatViewController {
                 stage.show();
             }catch (IOException e){
                 e.printStackTrace();
+
 
             }
         }

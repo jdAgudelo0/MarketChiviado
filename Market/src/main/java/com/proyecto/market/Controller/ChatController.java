@@ -11,6 +11,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.time.LocalDate;
 
 public class ChatController {
 
@@ -21,11 +22,16 @@ public class ChatController {
     private ImageView logoChiviado;
 
     @FXML
-    private TextField mensajeField;
+    private TextField mensajeField = new TextField();
 
     private String recipiente;
     private String userActual;
     private ObjectOutputStream out;
+
+    public TextField getMensajeField(){
+
+        return mensajeField;
+    }
 
     public void setRecipiente(String recipiente){
         this.recipiente = recipiente;
@@ -50,25 +56,25 @@ public class ChatController {
 
     private  void listenForMensajes (Socket socket){
         try (ObjectInputStream input = new ObjectInputStream(socket.getInputStream())){
-            while(true){
-                String mensaje= (String) input.readObject();
-                chatArea.appendText(mensaje + "\n");
-            }
-        } catch (IOException | ClassNotFoundException e) {
+
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     @FXML
     private void enviarMensaje(ActionEvent event) {
+
         String mensaje = mensajeField.getText();
+        LocalDate fecha = LocalDate.now();
         if(!mensaje.isEmpty()){
             try{
                 out.writeObject(recipiente);
-                out.writeObject(userActual+ ": " + mensaje + "\n");
+                out.writeObject(userActual+ ": " + mensaje + "\n" + fecha );
                 out.flush();
 
-                chatArea.appendText("Tu: " + mensaje + "\n");
+                chatArea.appendText("Tu: " + mensaje + "\n" + fecha);
+                chatArea.getText();
                 mensajeField.clear();
 
             } catch (IOException e){

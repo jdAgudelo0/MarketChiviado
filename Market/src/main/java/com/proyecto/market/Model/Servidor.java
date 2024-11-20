@@ -21,7 +21,7 @@ public class Servidor {
     public static void main(String[] args){
         vendedores.getVendedores();
 
-        System.out.println("Servidor iniciado con exito :)");
+        System.out.println("Servidor iniciado con exito :), esperando clientes...");
 
         try(ServerSocket serverSocket = new ServerSocket(12345)){
             while(true){
@@ -73,7 +73,7 @@ public class Servidor {
                 for (Map.Entry<String, String> entry : users.entrySet()) {
                     if (entry.getKey().equals(user) && entry.getValue().equals(password)) {
                         authenticated = true;
-                        out.writeObject("SUCESS");
+                        out.writeObject("SUCCESS");
                         break;
                     }
                 }

@@ -19,7 +19,9 @@ public class Market implements Serializable {
     private ArrayList<Muro> muros = new ArrayList<>();
     private ArrayList<Venta> ventas = new ArrayList<>();
 
-    public Market() {}
+
+    public Market() {
+    }
 
     // Getters And Setters
     public ArrayList<Vendedor> getVendedores() { return vendedores; }

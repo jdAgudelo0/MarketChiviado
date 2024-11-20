@@ -28,5 +28,6 @@
             <Image url="@../../../../../../../../../../Downloads/logoMarket.png" />
          </image>
       </ImageView>
+      <Button layoutX="31.0" layoutY="666.0" mnemonicParsing="false" onAction="#volver" prefHeight="34.0" prefWidth="126.0" style="-fx-background-color: black; -fx-background-radius: 11;" text="Volver" textFill="WHITE" />
    </children>
 </AnchorPane>

@@ -24,6 +24,11 @@ public class ReporteViewController {
     private Label lblNombre;
 
     @FXML
+    public void initialize(){
+
+    }
+
+    @FXML
     void agregar(ActionEvent event) {
 
     }
@@ -39,7 +44,7 @@ public class ReporteViewController {
             FXMLLoader loader= new FXMLLoader(getClass().getResource("/com/proyecto/market/muro.fxml"));
             Parent root = loader.load();
             Stage stage= new Stage();
-            stage.setTitle("Inicio sesion");
+            stage.setTitle("Muro");
             stage.setScene(new Scene(root));
             stage.show();
         }catch (IOException e){

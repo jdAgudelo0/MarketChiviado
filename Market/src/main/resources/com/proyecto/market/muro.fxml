@@ -8,8 +8,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="765.0" prefWidth="1024.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto.market.View.MuroViewController">
+<AnchorPane prefHeight="710.0" prefWidth="1024.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto.market.View.MuroViewController">
    <children>
       <ImageView fitHeight="302.0" fitWidth="284.0" layoutX="-11.0" layoutY="-89.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -61,15 +62,18 @@
       </VBox>
       <VBox layoutX="800.0" prefHeight="304.0" prefWidth="223.0">
          <children>
-            <Button fx:id="btnInicio" mnemonicParsing="false" prefHeight="26.0" prefWidth="245.0" text="Inicio" />
             <Button fx:id="btnGenerarReporte" mnemonicParsing="false" onAction="#generarReporte" prefHeight="42.0" prefWidth="223.0" text="Reporte Ventas" />
             <Button fx:id="btnAñadirProducto" layoutX="10.0" layoutY="61.0" mnemonicParsing="false" onAction="#anadirProductos" prefHeight="47.0" prefWidth="223.0" text="Añadir Producto" />
-            <Button fx:id="btnChat" layoutX="10.0" layoutY="87.0" mnemonicParsing="false" onAction="#abrirChats" prefHeight="50.0" prefWidth="223.0" text="Mensajes" />
-            <Button fx:id="btnVendedoresAliados" layoutX="10.0" layoutY="112.0" mnemonicParsing="false" onAction="#mostrarVendedoresAliados" prefHeight="72.0" prefWidth="223.0" text="Vendedores Aliados" />
+            <Button fx:id="btnVendedoresAliados" layoutX="10.0" layoutY="112.0" mnemonicParsing="false" onAction="#mostrarVendedoresAliados" prefHeight="47.0" prefWidth="223.0" text="Vendedores Aliados" />
             <Button fx:id="btnSugerenciasAmistad" layoutX="10.0" layoutY="138.0" mnemonicParsing="false" onAction="#sugerirAmistades" prefHeight="61.0" prefWidth="223.0" text="Sugerencias de amistad" />
          </children>
       </VBox>
       <Label fx:id="LblNombre" layoutX="14.0" layoutY="196.0" prefHeight="65.0" prefWidth="133.0" />
       <Label fx:id="lblDescripcion" layoutX="161.0" layoutY="265.0" prefHeight="150.0" prefWidth="202.0" />
+      <Button layoutX="48.0" layoutY="679.0" mnemonicParsing="false" onAction="#salir" prefHeight="42.0" prefWidth="133.0" style="-fx-background-color: black; -fx-background-radius: 11;" text="Salir" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

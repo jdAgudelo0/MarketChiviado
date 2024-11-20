@@ -96,8 +96,8 @@ public class MuroViewController {
     }
 
     @FXML
-    void abrirChats(ActionEvent event)throws  IOException{
-        cambiarVentana("ChatView.fxml", event);
+    void salir(ActionEvent event) throws IOException{
+        cambiarVentana("inicioSesion-view.fxml", event);
     }
 
 
