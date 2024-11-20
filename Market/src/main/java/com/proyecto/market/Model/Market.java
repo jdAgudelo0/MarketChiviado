@@ -13,7 +13,7 @@ public class Market implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private ArrayList<Vendedor> vendedores = new ArrayList<>();
+    private static ArrayList<Vendedor> vendedores = new ArrayList<>();
     private ArrayList<Producto> productos = new ArrayList<>();
     private ArrayList<Administrador> administradores = new ArrayList<>();
     private ArrayList<Muro> muros = new ArrayList<>();
@@ -24,7 +24,7 @@ public class Market implements Serializable {
     }
 
     // Getters And Setters
-    public ArrayList<Vendedor> getVendedores() { return vendedores; }
+    public static ArrayList<Vendedor> getVendedores() { return vendedores; }
 
     public void setVendedores(ArrayList<Vendedor> vendedores) { this.vendedores = vendedores; }
 

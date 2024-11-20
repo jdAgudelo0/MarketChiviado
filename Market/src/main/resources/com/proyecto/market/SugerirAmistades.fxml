@@ -9,24 +9,24 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="505.0" prefWidth="764.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto.market.View.SugerirAmistadesController">
+<AnchorPane prefHeight="650.0" prefWidth="957.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto.market.View.SugerirAmistadesController">
+   <ImageView fx:id="logoChiviado" fitHeight="176.0" fitWidth="220.0" layoutX="7.0" layoutY="6.0" pickOnBounds="true">
+      <image>
+         <Image url="@Imagenes/logo_market.png" />
+      </image>
+   </ImageView>
 
     <!-- Logo y título -->
     <HBox layoutX="20.0" layoutY="20.0" spacing="10" />
 
     <!-- Título de la sección -->
-    <Label layoutX="315.0" layoutY="34.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Sugerencias" />
-     <ImageView fx:id="logoImageView" fitHeight="104.0" fitWidth="188.0" layoutY="-1.0">
-      <image>
-         <Image url="@../../../../../../../../../../Downloads/logoMarket.png" />
-      </image>
-   </ImageView>
-   <Button layoutX="31.0" layoutY="442.0" mnemonicParsing="false" onAction="#volver" prefHeight="35.0" prefWidth="97.0" style="-fx-background-color: black; -fx-background-radius: 11;" text="Volver" textFill="WHITE" />
-      <Button layoutX="495.0" layoutY="232.0" onAction="#enviarSolicitud" prefHeight="44.0" prefWidth="143.0" style="-fx-background-color: #89CFF0; -fx-text-fill: black; -fx-background-radius: 15;" text="Enviar Solicitud">
+    <Label layoutX="411.0" layoutY="51.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Sugerencias" />
+   <Button layoutX="41.0" layoutY="574.0" mnemonicParsing="false" onAction="#volver" prefHeight="35.0" prefWidth="97.0" style="-fx-background-color: black; -fx-background-radius: 11;" text="Volver" textFill="WHITE" />
+      <Button layoutX="738.0" layoutY="347.0" onAction="#enviarSolicitud" prefHeight="44.0" prefWidth="143.0" style="-fx-background-color: #89CFF0; -fx-text-fill: black; -fx-background-radius: 15;" text="Enviar Solicitud">
       <font>
          <Font name="System Bold" size="12.0" />
       </font>
    </Button>
-   <ListView fx:id="sugerencias" layoutX="79.0" layoutY="97.0" prefHeight="313.0" prefWidth="361.0" />
+   <ListView fx:id="sugerencias" layoutX="117.0" layoutY="142.0" prefHeight="410.0" prefWidth="563.0" />
 
 </AnchorPane>

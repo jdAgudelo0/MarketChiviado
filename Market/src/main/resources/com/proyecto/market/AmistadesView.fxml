@@ -5,21 +5,31 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto.market.View.AmistadesView">
+<AnchorPane focusTraversable="true" prefHeight="786.0" prefWidth="939.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto.market.View.AmistadesView">
+   <ImageView fx:id="imgLogo" fitHeight="222.0" fitWidth="279.0" layoutX="-7.0" layoutY="-6.0" pickOnBounds="true">
+      <image>
+         <Image url="@Imagenes/logo_market.png" />
+      </image>
+   </ImageView>
 
     <!-- Panel Izquierdo -->
-    <VBox layoutX="20.0" layoutY="20.0" prefHeight="560.0" prefWidth="250.0" spacing="10">
+    <VBox layoutX="139.0" layoutY="132.0" prefHeight="581.0" prefWidth="287.0" spacing="10">
         <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Vendedores Aliados (10)" />
         <ListView fx:id="vendedoresAliadosList" prefHeight="500.0" />
-      <Button fx:id="btnVolver1" layoutX="10.0" layoutY="545.0" mnemonicParsing="false" onAction="#volver" style="-fx-background-color: black;" text="Volver" textFill="WHITE" />
-      <Button fx:id="btnVolver" mnemonicParsing="false" onAction="#nuevoMensaje" style="-fx-background-color: black;" text="Generar Chat" textFill="WHITE" />
+      <Button mnemonicParsing="false" onAction="#nuevoMensaje" prefHeight="36.0" prefWidth="131.0" style="-fx-background-color: black; -fx-background-radius: 11;" text="Generar Chat" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
     </VBox>
 
     <!-- Panel Derecho -->
-    <VBox layoutX="300.0" layoutY="20.0" prefHeight="560.0" prefWidth="450.0" spacing="10">
+    <VBox layoutX="463.0" layoutY="132.0" prefHeight="560.0" prefWidth="450.0" spacing="10">
         <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Solicitudes Vendedores" />
         <ListView fx:id="solicitudesList" prefHeight="500.0">
             <items>
@@ -29,5 +39,10 @@
             </items>
         </ListView>
     </VBox>
+   <Button fx:id="btnVolver" layoutX="29.0" layoutY="731.0" mnemonicParsing="false" onAction="#volver" style="-fx-background-color: black; -fx-background-radius: 11;" text="Volver" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="16.0" />
+      </font>
+   </Button>
 
 </AnchorPane>

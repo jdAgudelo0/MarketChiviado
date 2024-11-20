@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="23" class="java.beans.XMLDecoder">
+<java version="23.0.1" class="java.beans.XMLDecoder">
  <object class="com.proyecto.market.Model.Market" id="Market0">
   <void property="administradores">
    <void method="add">
@@ -21,103 +21,6 @@
      </void>
      <void property="usuario">
       <string>Juanito</string>
-     </void>
-    </object>
-   </void>
-  </void>
-  <void property="vendedores">
-   <void method="add">
-    <object class="com.proyecto.market.Model.Vendedor">
-     <void property="apellido">
-      <string>Bermudez</string>
-     </void>
-     <void property="cedula">
-      <string>12412412</string>
-     </void>
-     <void property="contrasenia">
-      <string>1234</string>
-     </void>
-     <void property="nombre">
-      <string>Elkin</string>
-     </void>
-     <void property="usuario">
-      <string>Elkinlol</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="com.proyecto.market.Model.Vendedor">
-     <void property="apellido">
-      <string>Bermudez Grajales</string>
-     </void>
-     <void property="cedula">
-      <string>3212312</string>
-     </void>
-     <void property="contrasenia">
-      <string>123</string>
-     </void>
-     <void property="nombre">
-      <string>Elkin</string>
-     </void>
-     <void property="usuario">
-      <string>agu33</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="com.proyecto.market.Model.Vendedor">
-     <void property="apellido">
-      <string>bERQ23</string>
-     </void>
-     <void property="cedula">
-      <string>123123</string>
-     </void>
-     <void property="contrasenia">
-      <string>12</string>
-     </void>
-     <void property="nombre">
-      <string>Juan</string>
-     </void>
-     <void property="usuario">
-      <string>Ju</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="com.proyecto.market.Model.Vendedor">
-     <void property="apellido">
-      <string>SSSS</string>
-     </void>
-     <void property="cedula">
-      <string>11111</string>
-     </void>
-     <void property="contrasenia">
-      <string>s</string>
-     </void>
-     <void property="nombre">
-      <string>S</string>
-     </void>
-     <void property="usuario">
-      <string>s</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="com.proyecto.market.Model.Vendedor">
-     <void property="apellido">
-      <string>Herrera</string>
-     </void>
-     <void property="cedula">
-      <string>1223</string>
-     </void>
-     <void property="contrasenia">
-      <string>ss</string>
-     </void>
-     <void property="nombre">
-      <string>Stefa</string>
-     </void>
-     <void property="usuario">
-      <string>ss</string>
      </void>
     </object>
    </void>

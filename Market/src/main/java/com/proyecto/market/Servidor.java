@@ -1,4 +1,4 @@
-package com.proyecto.market.Model;
+package com.proyecto.market;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -9,7 +9,9 @@ import java.net.SocketException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import com.proyecto.market.Model.Vendedor;
+
+import com.proyecto.market.Model.Market;
+import com.proyecto.market.Model.Producto;
 
 
 public class Servidor {

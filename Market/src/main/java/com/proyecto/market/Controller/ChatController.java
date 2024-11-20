@@ -2,9 +2,14 @@ package com.proyecto.market.Controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -28,10 +33,6 @@ public class ChatController {
     private String userActual;
     private ObjectOutputStream out;
 
-    public TextField getMensajeField(){
-
-        return mensajeField;
-    }
 
     public void setRecipiente(String recipiente){
         this.recipiente = recipiente;
@@ -59,6 +60,7 @@ public class ChatController {
           while(true){
               String mensaje = (String) input.readObject();
               chatArea.appendText(mensaje + "\n");
+              chatArea.getText();
           }
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
@@ -83,6 +85,29 @@ public class ChatController {
             } catch (IOException e){
                 e.printStackTrace();
             }
+        }else {
+
+        }
+
+    }
+
+    @FXML
+    void volver(ActionEvent actionEvent) {
+
+        Stage currentStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        currentStage.close();
+
+        //Intenta abrir el inicio sesion
+        try{
+            FXMLLoader loader= new FXMLLoader(getClass().getResource("/com/proyecto/market/muro.fxml"));
+            Parent root = loader.load();
+            Stage stage= new Stage();
+            stage.setTitle("Muro");
+            stage.setScene(new Scene(root));
+            stage.show();
+        }catch (IOException e){
+            e.printStackTrace();
+
         }
 
     }
