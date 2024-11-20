@@ -1,6 +1,8 @@
 package com.proyecto.market.View;
 
 import com.proyecto.market.Controller.ChatController;
+import com.proyecto.market.Model.Market;
+import com.proyecto.market.Model.Vendedor;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -17,6 +19,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class AmistadesView {
 
@@ -29,18 +32,34 @@ public class AmistadesView {
     @FXML
     private ListView<String> vendedoresAliadosList;
 
+    private Vendedor currentUser;
+
     private ObservableList<String> aliados = FXCollections.observableArrayList();
+
+    private ObservableList<String> solicitudes = FXCollections.observableArrayList(); // Lista observable de solicitudes
 
 
     @FXML
     public void initialize (){
-        aliados.add("Tefa");
-        aliados.add("Elkin");
-        aliados.add("Santa");
-        vendedoresAliadosList.getSelectionModel().setSelectionMode(javafx.scene.control.SelectionMode.SINGLE);
-        vendedoresAliadosList.setItems(aliados);
-        vendedoresAliadosList.getSelectionModel().clearSelection();
 
+        String currentUsername = InicioViewController.getCurrentUser();
+        currentUser = Market.getVendedores().stream()
+                .filter(v -> v.getUsuario().equals(currentUsername))
+                .findAny().orElse(null);
+
+        if (currentUser != null) {
+            // Cargar la lista de aliados
+            List<Vendedor> aliadosList = currentUser.getAliados();
+
+            aliadosList.forEach(v -> this.aliados.add(v.getUsuario())); // Añadir aliados a la lista observable
+
+            // Cargar las solicitudes recibidas (suponiendo que el vendedor las tiene)
+            currentUser.getSolicitudesRecibidas().forEach(v -> solicitudes.add(v.getUsuario())); // Añadir solicitudes
+
+            // Asignar la lista observable a la vista
+            vendedoresAliadosList.setItems(aliados);
+            solicitudesList.setItems(solicitudes);
+        }
     }
 
     @FXML
@@ -78,6 +97,62 @@ public class AmistadesView {
             Alert alert = new Alert(Alert.AlertType.WARNING, "Selecciona un aliado para abrir el chat.");
             alert.show();
         }
+
+    }
+
+    @FXML
+    void aceptarSolicitud (ActionEvent event) {
+
+        String vendedorSeleccionado = solicitudesList.getSelectionModel().getSelectedItem();
+        if (vendedorSeleccionado != null) {
+            Vendedor solicitante = Market.getVendedores().stream()
+                    .filter(v -> v.getUsuario().equals(vendedorSeleccionado))
+                    .findFirst()
+                    .orElse(null);
+
+            if (solicitante != null) {
+                currentUser.aceptarSolicitud(solicitante); // Aceptar la solicitud
+
+                // Actualizar la interfaz: agregar al solicitante a los aliados y eliminar la solicitud
+                aliados.add(solicitante.getUsuario());
+                solicitudes.remove(vendedorSeleccionado);
+
+                Alert alert = new Alert(Alert.AlertType.INFORMATION, "Solicitud aceptada de " + solicitante.getUsuario());
+                alert.show();
+            }
+        } else {
+            Alert alert = new Alert(Alert.AlertType.WARNING, "Selecciona una solicitud para aceptar.");
+            alert.show();
+        }
+
+
+    }
+
+    @FXML
+    void rechazarSolicitud (ActionEvent event) {
+
+        String vendedorSeleccionado = solicitudesList.getSelectionModel().getSelectedItem();
+        if (vendedorSeleccionado != null) {
+            Vendedor solicitante = Market.getVendedores().stream()
+                    .filter(v -> v.getUsuario().equals(vendedorSeleccionado))
+                    .findFirst()
+                    .orElse(null);
+
+            if (solicitante != null) {
+                // Eliminar la solicitud y no agregar al solicitante a los aliados
+                currentUser.getSolicitudesRecibidas().remove(solicitante); // Eliminar de la lista de solicitudes
+
+                // Actualizar la interfaz: quitar al solicitante de la lista de solicitudes
+                solicitudes.remove(vendedorSeleccionado);
+
+                Alert alert = new Alert(Alert.AlertType.INFORMATION, "Solicitud rechazada de " + solicitante.getUsuario());
+                alert.show();
+            }
+        } else {
+            Alert alert = new Alert(Alert.AlertType.WARNING, "Selecciona una solicitud para rechazar.");
+            alert.show();
+        }
+
 
     }
 

@@ -97,7 +97,21 @@ public class MuroViewController {
 
     @FXML
     void salir(ActionEvent event) throws IOException{
-        cambiarVentana("inicioSesion-view.fxml", event);
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        currentStage.close();
+
+        //Intenta abrir el inicio sesion
+        try{
+            FXMLLoader loader= new FXMLLoader(getClass().getResource("/com/proyecto/market/inicioSesion-view.fxml"));
+            Parent root = loader.load();
+            Stage stage= new Stage();
+            stage.setTitle("Inicio sesion");
+            stage.setScene(new Scene(root));
+            stage.show();
+        }catch (IOException e){
+            e.printStackTrace();
+
+        }
     }
 
 

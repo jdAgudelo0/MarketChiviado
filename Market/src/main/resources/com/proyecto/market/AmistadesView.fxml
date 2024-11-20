@@ -22,10 +22,11 @@
     <VBox layoutX="139.0" layoutY="132.0" prefHeight="581.0" prefWidth="287.0" spacing="10">
         <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Vendedores Aliados (10)" />
         <ListView fx:id="vendedoresAliadosList" prefHeight="500.0" />
-      <Button mnemonicParsing="false" onAction="#nuevoMensaje" prefHeight="36.0" prefWidth="131.0" style="-fx-background-color: black; -fx-background-radius: 11;" text="Generar Chat" textFill="WHITE">
+      <Button layoutX="10.0" layoutY="555.0" mnemonicParsing="false" onAction="#nuevoMensaje" prefHeight="36.0" prefWidth="131.0" style="-fx-background-color: black; -fx-background-radius: 11;" text="Generar Chat" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
-         </font></Button>
+         </font>
+      </Button>
     </VBox>
 
     <!-- Panel Derecho -->
@@ -38,6 +39,15 @@
                 </FXCollections>
             </items>
         </ListView>
+      <Button layoutX="10.0" layoutY="540.0" mnemonicParsing="false" onAction="#aceptarSolicitud" prefHeight="31.0" prefWidth="145.0" style="-fx-background-color: black; -fx-background-radius: 11;" text="Aceptar Solicitud" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#rechazarSolicitud" prefHeight="35.0" prefWidth="148.0" style="-fx-background-color: black; -fx-background-radius: 11;" text="Rechazar Solicitud" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
     </VBox>
    <Button fx:id="btnVolver" layoutX="29.0" layoutY="731.0" mnemonicParsing="false" onAction="#volver" style="-fx-background-color: black; -fx-background-radius: 11;" text="Volver" textFill="WHITE">
       <font>

@@ -45,7 +45,7 @@ public class ChatController {
         logoChiviado.getImage();
 
         try {
-            Socket socket = new Socket("localHost",12345);
+            Socket socket = new Socket("localHost",12346);
             out = new ObjectOutputStream(socket.getOutputStream());
             new Thread(() -> listenForMensajes(socket)).start();
 
