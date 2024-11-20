@@ -51,7 +51,7 @@ public class ArchivoUtil {
 
     }
 
-    public static void cargarFechaSistema(){
+    public static Object cargarFechaSistema(){
         String dia_n = "";
         String mes_n = "";
 
@@ -74,6 +74,7 @@ public class ArchivoUtil {
         }
 
         fechaSistema = dia_n+"/"+mes_n+"/"+anio+"/"+hora;
+        return null;
     }
 
     public static void guardarArchivo(String rutaArchivo, String contendio, boolean bandera) throws IOException {

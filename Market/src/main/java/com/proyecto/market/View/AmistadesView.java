@@ -40,6 +40,8 @@ public class AmistadesView {
 
     private static String contacto;
 
+
+
     public static String getContacto() {
         return contacto;
     }

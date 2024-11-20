@@ -39,10 +39,10 @@ public class ModelFactory {
 
     public ModelFactory() throws IOException {
 
-        System.out.printf("te invoco");
+        System.out.printf("te invoco : ");
 
         cargarDatos();
-        guardarLog("Inicio De Sesion: " ,1,", " + "ha Iniciado Sesion");
+        guardarLog("Inicio De Sesion: " ,1,  "ha Iniciado Sesion");
         guardarBinario();
         guardarArchivoXml();
         iniciarActualizacionDatos();

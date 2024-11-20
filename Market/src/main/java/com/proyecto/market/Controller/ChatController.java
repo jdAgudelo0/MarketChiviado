@@ -1,5 +1,6 @@
 package com.proyecto.market.Controller;
 
+import com.proyecto.market.Utils.ArchivoUtil;
 import com.proyecto.market.View.AmistadesView;
 import com.proyecto.market.View.InicioViewController;
 import javafx.event.ActionEvent;
@@ -16,6 +17,7 @@ import javafx.stage.Stage;
 
 import java.io.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class ChatController {
 
@@ -53,7 +55,7 @@ public class ChatController {
         userActual = InicioViewController.getCurrentUser();
 
         String mensaje = mensajeField.getText();
-        LocalDate fecha = LocalDate.parse(String.valueOf(LocalDate.now()));
+        String fecha = String.valueOf(ArchivoUtil.cargarFechaSistema());
         if(!mensaje.isEmpty()){
             chatArea.appendText(userActual +": " + mensaje + " (" + fecha + ")\n");
             guardarMensajeEnArchivo(userActual + ": " + mensaje + " (" + fecha + ")\n");
@@ -78,7 +80,6 @@ public class ChatController {
             e.printStackTrace();
         }
     }
-
     private void guardarMensajeEnArchivo(String mensaje) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("Chat.txt", true))) {
             // Guardar el mensaje en el archivo
