@@ -38,6 +38,11 @@ public class AmistadesView {
 
     private ObservableList<String> solicitudes = FXCollections.observableArrayList(); // Lista observable de solicitudes
 
+    private static String contacto;
+
+    public static String getContacto() {
+        return contacto;
+    }
 
     @FXML
     public void initialize (){
@@ -67,7 +72,8 @@ public class AmistadesView {
         Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         currentStage.close();
 
-        String contacto = String.valueOf(vendedoresAliadosList.getSelectionModel().getSelectedItem());
+        contacto = String.valueOf(vendedoresAliadosList.getSelectionModel().getSelectedItem());
+
         if (contacto != null) {
 
             try {
@@ -76,8 +82,7 @@ public class AmistadesView {
 
                 ChatController chatController = loader.getController();
 
-                String currentUser = InicioViewController.getCurrentUser();
-                chatController.initialize(currentUser, contacto);
+                chatController.initialize(contacto);
 
 
                 Stage stage = new Stage();
@@ -93,7 +98,7 @@ public class AmistadesView {
 
             }
 
-        }else {
+        }else if (contacto== null){
             Alert alert = new Alert(Alert.AlertType.WARNING, "Selecciona un aliado para abrir el chat.");
             alert.show();
         }

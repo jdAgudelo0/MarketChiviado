@@ -1,21 +1,20 @@
 package com.proyecto.market.Controller;
 
+import com.proyecto.market.View.AmistadesView;
+import com.proyecto.market.View.InicioViewController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.net.Socket;
-import java.net.UnknownHostException;
+import java.io.*;
 import java.time.LocalDate;
 
 public class ChatController {
@@ -29,66 +28,65 @@ public class ChatController {
     @FXML
     private TextField mensajeField = new TextField();
 
-    private String recipiente;
+    private static String recipiente;
     private String userActual;
     private ObjectOutputStream out;
 
 
-    public void setRecipiente(String recipiente){
-        this.recipiente = recipiente;
+    public static String getRecipiente(){
+        return recipiente;
     }
 
     @FXML
-    public void initialize(String userActual, String recipiente){
-        this.userActual = userActual;
-        this.recipiente = recipiente;
+    public void initialize(String recipiente){
         logoChiviado.getImage();
-
-        try {
-            Socket socket = new Socket("localHost",12346);
-            out = new ObjectOutputStream(socket.getOutputStream());
-            new Thread(() -> listenForMensajes(socket)).start();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
+        chatArea.getText();
+        recipiente = AmistadesView.getContacto();
+        cargarMensajesDelArchivo();
     }
 
-    private  void listenForMensajes (Socket socket){
-        try (ObjectInputStream input = new ObjectInputStream(socket.getInputStream())){
-          while(true){
-              String mensaje = (String) input.readObject();
-              chatArea.appendText(mensaje + "\n");
-              chatArea.getText();
-          }
-        } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
 
     @FXML
     private void enviarMensaje(ActionEvent event) {
 
+
+        userActual = InicioViewController.getCurrentUser();
+
         String mensaje = mensajeField.getText();
-        LocalDate fecha = LocalDate.now();
+        LocalDate fecha = LocalDate.parse(String.valueOf(LocalDate.now()));
         if(!mensaje.isEmpty()){
-            try{
-                out.writeObject(recipiente);
-                out.writeObject(userActual+ ": " + mensaje + "\n" + fecha );
-                out.flush();
+            chatArea.appendText(userActual +": " + mensaje + " (" + fecha + ")\n");
+            guardarMensajeEnArchivo(userActual + ": " + mensaje + " (" + fecha + ")\n");
 
-                chatArea.appendText("Tu: " + mensaje + "\n" + fecha);
-                chatArea.getText();
-                mensajeField.clear();
+            mensajeField.clear();
 
-            } catch (IOException e){
-                e.printStackTrace();
-            }
         }else {
-
+            Alert alert = new Alert(Alert.AlertType.INFORMATION, "El mensaje no puede estar vacio " );
+            alert.show();
         }
 
+    }
+
+    private void cargarMensajesDelArchivo() {
+        try (BufferedReader reader = new BufferedReader(new FileReader("Chat.txt"))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                // Agregar cada línea leída al área de chat
+                chatArea.appendText(line + "\n");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void guardarMensajeEnArchivo(String mensaje) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("Chat.txt", true))) {
+            // Guardar el mensaje en el archivo
+            writer.write(mensaje);
+            writer.newLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

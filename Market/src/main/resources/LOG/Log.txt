@@ -342,3 +342,37 @@ nov 20, 2024 11:57:56 A. M. com.proyecto.market.Utils.ArchivoUtil guardarRegist
 INFO: , ha Iniciado Sesion Inicio De Sesion:  20/10/2024/11
 nov 20, 2024 12:00:48 P. M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
 INFO: , ha Iniciado Sesion Inicio De Sesion:  20/10/2024/0
+nov 20, 2024 12:04:19 P. M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: , ha Iniciado Sesion Inicio De Sesion:  20/10/2024/0
+nov 20, 2024 12:05:58 P. M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: , ha Iniciado Sesion Inicio De Sesion:  20/10/2024/0
+nov 20, 2024 12:07:36 P. M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: , ha Iniciado Sesion Inicio De Sesion:  20/10/2024/0
+nov 20, 2024 12:10:09 P. M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: , ha Iniciado Sesion Inicio De Sesion:  20/10/2024/0
+nov 20, 2024 12:14:29 P. M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: , ha Iniciado Sesion Inicio De Sesion:  20/10/2024/0
+nov 20, 2024 12:20:00 P. M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: , ha Iniciado Sesion Inicio De Sesion:  20/10/2024/0
+nov 20, 2024 12:21:52 P. M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: , ha Iniciado Sesion Inicio De Sesion:  20/10/2024/0
+nov 20, 2024 12:24:49 P. M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: , ha Iniciado Sesion Inicio De Sesion:  20/10/2024/0
+nov 20, 2024 12:26:46 P. M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: , ha Iniciado Sesion Inicio De Sesion:  20/10/2024/0
+nov 20, 2024 12:31:20 P. M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: , ha Iniciado Sesion Inicio De Sesion:  20/10/2024/0
+nov 20, 2024 12:33:14 P. M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: , ha Iniciado Sesion Inicio De Sesion:  20/10/2024/0
+nov 20, 2024 12:36:09 P. M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: , ha Iniciado Sesion Inicio De Sesion:  20/10/2024/0
+nov 20, 2024 12:39:39 P. M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: , ha Iniciado Sesion Inicio De Sesion:  20/10/2024/0
+nov 20, 2024 12:46:04 P. M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: , ha Iniciado Sesion Inicio De Sesion:  20/10/2024/0
+nov 20, 2024 12:47:53 P. M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: , ha Iniciado Sesion Inicio De Sesion:  20/10/2024/0
+nov 20, 2024 12:52:35 P. M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: , ha Iniciado Sesion Inicio De Sesion:  20/10/2024/0
+nov 20, 2024 12:58:12 P. M. com.proyecto.market.Utils.ArchivoUtil guardarRegistroLOG
+INFO: , ha Iniciado Sesion Inicio De Sesion:  20/10/2024/0

@@ -20,7 +20,7 @@
       <VBox layoutX="186.0" layoutY="157.0" prefHeight="543.0" prefWidth="701.0">
          <children>
             <TextArea fx:id="chatArea" editable="false" prefHeight="396.0" prefWidth="701.0" />
-            <TextField fx:id="mensaje" alignment="TOP_LEFT" prefHeight="113.0" prefWidth="701.0" />
+            <TextField fx:id="mensajeField" alignment="TOP_LEFT" prefHeight="113.0" prefWidth="701.0" />
             <Button mnemonicParsing="false" onAction="#enviarMensaje" prefHeight="35.0" prefWidth="178.0" style="-fx-translate-x: 515; -fx-background-color: black; -fx-text-fill: white; -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 2); -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 20; -fx-padding: 12 30 12 30;" text="Enviar Mensaje" />
          </children></VBox>
       <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="474.0" layoutY="61.0" prefHeight="27.0" prefWidth="126.0" text="Chat">
